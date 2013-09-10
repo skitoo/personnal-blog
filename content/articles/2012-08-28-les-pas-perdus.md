@@ -2,6 +2,7 @@ Title: Les pas perdus
 Date: 2012-08-28 22:03
 Icon: theather
 Description: Pièce de théâtre Les pas perdus écrite par Denise Bonal joué par des comédiens débutants du théâtre Jour et Nuit à Clermont-Ferrand.
+Tags: Théâtre
 
 
 Voici maintenant un an que je me suis mis au théâtre avec [Pierre-Louis Gonon](http://piiwa.fr) dans la troupe [Jour et Nuit](http://www.theatre-jouretnuit.fr/) à Clermont-Ferrand.

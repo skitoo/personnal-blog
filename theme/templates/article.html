@@ -10,7 +10,14 @@
 <article>
     <header>
         <h1>{{article.title}}</h1>
-        <span class="publication-date"><time pubdate="pubdate" datetime="{{article.locale_date}}">{{article.locale_date|capitalize}}</time>, Alexis Couronne</span>
+        <span class="publication-date">
+            <time pubdate="pubdate" datetime="{{article.locale_date}}">{{article.locale_date|capitalize}}</time>, Alexis Couronne - 
+            [
+            {% for tag in article.tags %}
+                <a href="{{tag.url}}">{{tag}}</a>{% if not loop.last %} :: {% endif %}
+            {% endfor %}
+            ]
+        </span>
     </header>
     <div id="ticket-content" class="ticket-content">
         {{article.content}}

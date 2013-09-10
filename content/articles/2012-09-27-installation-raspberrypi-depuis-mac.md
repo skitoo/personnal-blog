@@ -2,6 +2,7 @@ Title: Tutoriel RaspberryPi : Créer une carte SD depuis votre Mac
 Date: 2012-09-26 10:20
 Icon: icon-beaker
 Status: draft
+Tags: RaspberryPi, Tutoriel
 
 Comme je vous le signalais lors d'un précédent article je me suis récemment offert un [Raspberry PI](/raspberry-pi-lordinateur-a-bas-cout.html). Voici aujourd'hui quelques lignes pour vous expliquer comment installer sur votre carte SD le système d'exploitation depuis votre Mac.
 

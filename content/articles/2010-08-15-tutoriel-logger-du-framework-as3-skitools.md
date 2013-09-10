@@ -1,6 +1,7 @@
 Title: Tutoriel - Logger du framework AS3 Skitools
 Date: 2010-08-15 10:28
 Icon: flashplayer
+Tags: Flash/AS3, Tutoriel
 
 Voilà bientôt un an et demi que je développe en AS3 dans un cadre
 professionnel. Au cour de mon apprentissage sur la technologie Flash,

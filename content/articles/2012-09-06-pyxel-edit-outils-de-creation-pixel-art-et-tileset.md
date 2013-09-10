@@ -1,6 +1,7 @@
 Title: Pyxel Edit, l'outil de création de pixel art et de tileset
 Date: 2012-09-06 08:42
 Icon: pen
+Tags: Jeu vidéo, Pixel Art
 
 
 Voici la petite découverte de la journée : [Pyxel Edit](http://pyxeledit.com/) un outil de création de [pixel art](http://fr.wikipedia.org/wiki/Pixel_art).

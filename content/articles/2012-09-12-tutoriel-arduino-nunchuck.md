@@ -1,6 +1,7 @@
 Title: Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii
 Date: 2012-09-12 10:20
 Icon: diode
+Tags: Arduino, Tutoriel
 
 Il a quelques temps (2 ans en fait), j'ai réalisé un petit montage basé sur un [kit Arduino](/arduino.html) qui permettait de [contrôler un servomoteur à partir d'un nunchuck](/premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html). Suite à de nombreuses demandes, j'ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.
 

@@ -1,6 +1,7 @@
 Title: Raspberry Pi, l'ordinateur à bas coût
 Date: 2012-09-11 10:20
 Icon: raspberrypi
+Tags: RaspberryPI
 
 Aujourd'hui j'ai reçu mon nouveau jouet : un [Raspberry Pi](http://http://www.raspberrypi.org/). 
 

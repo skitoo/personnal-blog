@@ -1,6 +1,7 @@
 Title: Comment contrôler un jeu de plateforme sur mobile ou tablette ?
 Date: 2012-09-04 19:42
 Icon: gamecursor
+Tags: Jeu vidéo
 
 
 Lorsque l'on est confronté au développement d'un jeu sur mobile ou tablette, il y a des contraintes que l'on ne retrouve que sur ce genre de support. En effet, le contrôle d'un personnage de jeu de plateforme tel que Mario n'est pas très aisé et souvent soumis à de [vives critiques](http://www.gamesradar.com/10-reasons-the-iphone-is-a-shitty-game-platform/). L'absence de gamepad à contraint les développeurs à trouver des ruses pour rendre cela possible.

@@ -1,6 +1,7 @@
 Title: Premier montage Arduino : Contrôler un servo moteur avec un Nunchuck Wii
 Date: 2010-10-17 10:23
 Icon: diode
+Tags: Arduino, DIY
 
 Ça y est ! J'ai reçu mon dernier petit jouet : un kit Arduino. Pour mon
 premier test avec ce système, j'ai réalisé un petit montage permettant
