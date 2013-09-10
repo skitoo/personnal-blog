@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block title %}Alexis Couronne, développeur Python et développeur Flash/AS3{% endblock %}
+{% block description %}Co-fondateur de l'agence Scopart. Passionné par le web, le jeu vidéo et de l'électronique. Je réalise des projets OpenSource et je suis photographe amateur.{% endblock %}
+{% block current_url %}{{ SITEURL }}{% endblock %}
+
+{% block main %}
+<div class="introduction">
+    <h1>Alexis Couronne, développeur Python et développeur Flash/AS3</h1>
+    <p>J'ai co-fondé l'agence <a href="http://www.scopart.fr" title="Agence Web Scopart">Scopart</a> en janvier 2010 à <strong>Clermont-Ferrand</strong>.</p>
+    <p>Je suis passionné par l'apprentissage des technologies du <strong>web</strong>, du <strong>jeu vidéo</strong> et de l'<strong>électronique</strong>.</p>
+    <p>J'utilise mon temps libre à contribuer à des projets <strong>open source</strong> ou à porter mon regard à travers l'objectif de mon appareil <strong>photo</strong>.</p>
+</div>
+
+<div class="last-posts">
+    <h2>Derniers billets</h2>
+    {% for grouped_by_year in articles|limit|groupby('date.year')|sort(reverse=True) %}
+        <div class="archive-year">{{grouped_by_year.grouper}}</div>  
+        <ul>
+        {% for ticket in grouped_by_year.list %}
+            <li><a href="{{ticket.url}}">{{ticket.title}}</a></li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
+
+<div>La suite du journal dans <a href="journal.html" title="Journal">les archives</a>.</div>
+
+{% include "follow-me.html" %}
+{% endblock %}
+

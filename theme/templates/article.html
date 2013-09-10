@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{{article.title}}{% endblock %}
+{% block description %}{{article.description}}{% endblock %}
+{% block current_url %}{{ SITEURL }}/{{article.url}}{% endblock %}
+
+{% block icon %}{{article.icon}}{% endblock %}
+
+{% block main %}
+<article>
+    <header>
+        <h1>{{article.title}}</h1>
+        <span class="publication-date"><time pubdate="pubdate" datetime="{{article.locale_date}}">{{article.locale_date|capitalize}}</time>, Alexis Couronne</span>
+    </header>
+    <div id="ticket-content" class="ticket-content">
+        {{article.content}}
+    </div>
+    <hr class="hr">
+    <div>
+        <ul class="pagination">
+        {% if article.status != 'draft' %}
+            {% if articles.index(article) < articles|length - 1 %}
+                <li><a href="{{ SITEURL }}/{{articles[articles.index(article) + 1].url}}" rel="prev">&laquo; Précédent</a></li>
+            {% endif %}
+            {% if  articles.index(article) > 0 %}
+                <li><a href="{{ SITEURL }}/{{articles[articles.index(article) - 1].url}}" rel="next">Suivant &raquo;</a></li>
+            {% else %}
+                <li></li>
+            {% endif %}
+        {% endif %}
+        </ul>
+    </div>
+    <footer>
+        <p>Des appréciations, des remarques, des questions ? N'hésitez pas à le faire dans les commentaires.</p>
+        <p>Suivez moi sur <a href="https://twitter.com/skitoo/" title="Compte Twitter">Twitter</a> et sur <a href="https://github.com/skitoo/" title="Compte Github">Github</a>.</p>
+        {% include "disqus.html" %}
+    </footer>
+</article>
+{% endblock %}

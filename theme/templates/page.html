@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Alexis Couronne - {{page.title}}{% endblock %}
+{% block description %}{{page.description}}{% endblock %}
+{% block current_url %}{{ SITEURL }}{{page.url}}{% endblock %}
+
+
+{% block icon %}{{page.icon}}{% endblock %}
+
+{% block main %}
+<h1>{{page.title}}</h1>
+<div>
+    {{page.content}}
+</div>
+{% include "follow-me.html" %}
+{% endblock %}
+
+{% if page.title == 'Photos' %}
+    {% block javascript %}
+    {{super()}}
+    <script src="{{ SITEURL }}/theme/js/gallery.js" type="text/javascript" charset="utf-8" ></script>
+    {% endblock %}
+{% endif %}

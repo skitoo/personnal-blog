@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Alexis Couronne - Erreur 404{% endblock %}
+{% block current_url %}{{ SITEURL }}/404.html{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="span2">
+        <i class="icon-remove-sign presentation-icon"></i>
+    </div>
+    <div class="span10">
+        <h1>Erreur 404</h1>
+        <div>
+            La page que vous souhaitez consulter n'existe pas.
+        </div>
+    </div>
+</div>
+
+{% include "follow-me.html" %}
+{% endblock %}
