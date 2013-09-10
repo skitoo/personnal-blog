@@ -41,10 +41,6 @@ LINKS = SOCIAL = None
 
 DEFAULT_PAGINATION = 10
 
-PHOTOS_PAGE_OUTPUT = "photos.html"
-PHOTOS_TEMPLATE_INPUT = "photos.html"
-PHOTOS_PATH = "content/photos"
-
 
 def limit(list, number=10):
     return list[0:number]
@@ -52,6 +48,3 @@ def limit(list, number=10):
 JINJA_FILTERS = {
     'limit': limit,
 }
-
-#PLUGIN_PATH = "plugins"
-#PLUGINS = ['photo']
