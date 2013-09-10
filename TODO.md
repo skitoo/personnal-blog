@@ -3,7 +3,7 @@
 # TODO
 
 * --Supprimer les fichiers Font inutiles--
-* Mettre du padding sur les blocs "code"
+* --Mettre du padding sur les blocs "code"--
 * Faire en sorte que le footer soit toujours en bas
 * Vérifier le responsive-design
 * Nettoyer le fichier pelicanconf

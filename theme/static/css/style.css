@@ -602,6 +602,11 @@ article .pagination a:hover {
 }
 .highlight pre {
   border: 1px solid #9c9c9c;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: #d2d2d2;
+  background: #4d4d4d;
 }
 .highlight .k,
 .highlight .kd,
@@ -614,7 +619,7 @@ article .pagination a:hover {
   color: #ffce73;
 }
 .highlight .c1 {
-  color: #aaaaaa;
+  color: #777777;
 }
 .highlight .mh,
 .highlight .mi {
