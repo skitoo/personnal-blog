@@ -12,6 +12,9 @@
 .font-face('HybreaRegular', '../font/ufonts.com_hybrea-webfont');
 .font-face('WebHostingHub', '../font/webhostinghub-glyphs');
 
+html, body{
+    height: 100%;
+}
 
 body{
     color:@soft-grey;
@@ -247,8 +250,16 @@ article{
 
 .content{
     width: 84%;
+    height: 100%;
     margin: 0 auto;
     .clearfix();
+    padding-bottom: 180px;
+}
+
+.container{
+    min-height: 100%;
+    position: relative;
+    #gradient-with-img > .vertical(@dark-grey-with-alpha, @middle-grey-with-alpha, '../img/hexagone.png');
 }
 
 .sidebar{
@@ -264,8 +275,12 @@ article{
     background: url('../img/black_linen_v2.png') repeat;
     border-top: 1px solid @dark-orange;
     height: 150px;
+    width: 100%;
     margin-top: 50px;
     padding: 0 20px;
+    position: absolute;
+    bottom: 0;
+    .box-sizing(border-box);
 
     ul{
         margin-top: 40px;
@@ -289,6 +304,7 @@ article{
 .copyright{
     float: right;
     margin-top:40px;
+    margin-right: 40px;
     .font-size-rems(13);
 }
 
@@ -363,6 +379,10 @@ article{
         .font-size-rems(100);
     }
 
+    .content{
+        padding-bottom: 200px;
+    }
+
     .footer{
         height:170px;
 
@@ -381,6 +401,10 @@ article{
 @media screen and (max-width: 768px){
     .icon{
         .font-size-rems(80);
+    }
+
+    .content{
+        padding-bottom: 220px;
     }
 
     .footer{
@@ -446,6 +470,9 @@ article{
         float: none;
         width: 100%;
     }
+    .content{
+        padding-bottom: 220px;
+    }
     .footer{
         height:190px;
 
@@ -470,6 +497,9 @@ article{
             padding: 10px 0;
         }
     }
+    .content{
+        padding-bottom: 247px;
+    }
     .footer{
         height: 217px;
     }
@@ -479,6 +509,9 @@ article{
 }
 
 @media screen and (max-width: 360px){
+    .content{
+        padding-bottom: 290px;
+    }
     .footer{
         height: 260px;
     }
