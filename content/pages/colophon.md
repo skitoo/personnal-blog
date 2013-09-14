@@ -11,7 +11,7 @@ J'utilise mon temps libre à contribuer à des projets open source ou à porter 
 
 Ce site a été conçu à l'aide du moteur de blog [Pelican](https://github.com/getpelican/pelican "Pelican") appuyé par la technologie [Less](http://lesscss.org/ "Less").
 
-Pour la partie graphique les différentes textures ont été pioché sur le site [subtlepatterns.com](http://subtlepatterns.com/). Enfin pour les icones j'ai utilisé l'extension Bootstrap [FontAwesome](http://fortawesome.github.com/Font-Awesome/ "FontAwesome").
+Pour la partie graphique les différentes textures ont été pioché sur le site [subtlepatterns.com](http://subtlepatterns.com/). Enfin pour les icones j'ai utilisé la police [WebHostingHub](http://www.webhostinghub.com/glyphs/ "WebHostingHub").
 
 
 ##Photo
