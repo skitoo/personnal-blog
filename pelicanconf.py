@@ -43,3 +43,5 @@ DEFAULT_PAGINATION = 10
 JINJA_FILTERS = {
     'limit': lambda list, number=10: list[0:number],
 }
+
+DISQUS_SITENAME = 'alexiscouronne'
