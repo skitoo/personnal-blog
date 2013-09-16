@@ -668,6 +668,26 @@ article .pagination a:hover {
 .highlight .mi {
   color: #ffa500;
 }
+.page404 {
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  margin: 0 auto 30px auto;
+  background: #212121;
+  text-align: center;
+  border: 10px solid #ffbc40;
+}
+.page404 h1 {
+  border: none;
+  font-size: 100px;
+  font-size: 6.25rem;
+  margin-top: 130px;
+}
+.text-center {
+  text-align: center;
+}
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'WebHostingHub';

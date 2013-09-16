@@ -4,17 +4,8 @@
 {% block current_url %}{{ SITEURL }}/404.html{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="span2">
-        <i class="icon-remove-sign presentation-icon"></i>
-    </div>
-    <div class="span10">
-        <h1>Erreur 404</h1>
-        <div>
-            La page que vous souhaitez consulter n'existe pas.
-        </div>
-    </div>
+<div class="page404">
+    <h1>404</h1>
 </div>
-
-{% include "follow-me.html" %}
+<div class="text-center">La page que vous souhaitez consulter n'existe pas.</div>
 {% endblock %}
