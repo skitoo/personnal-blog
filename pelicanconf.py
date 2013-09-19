@@ -34,6 +34,7 @@ TEMPLATE_PAGES = {
     'journal.html': 'journal.html',
     '404.html': '404.html',
     'sitemap.html': 'sitemap.xml',
+    '.htaccess': '.htaccess',
 }
 
 LINKS = SOCIAL = None
