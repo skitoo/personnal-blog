@@ -1,6 +1,11 @@
 Title: Projets
 Icon: flaskfull
 
+##Kivy-Particle
+
+Kivy-Particle est un portage de l'extension [Starling Particle System](https://github.com/PrimaryFeather/Starling-Extension-Particle-System "Starling Particle System") pour le framework Python [Kivy](http://kivy.org "Kivy").
+
+[[skitoo/kivy-particle](https://github.com/skitoo/kivy-particle "Kivy-Particle")]
 
 ##Rozenn
 
