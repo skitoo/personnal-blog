@@ -4,7 +4,7 @@ Icon: playvideo
 Tags: Arduino
 
 
-<iframe src="http://player.vimeo.com/video/18539129" width="700" height="393" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/18539129" width="700" height="393" allowFullScreen></iframe>
 
 
 Voici une petite vidéo qui m'avait échappée. Sortie en 2010, celle-ci

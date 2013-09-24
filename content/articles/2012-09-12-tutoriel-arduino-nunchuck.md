@@ -133,7 +133,7 @@ Ce code a été inspiré par [celui-ci](https://github.com/chrisgilmerproj/WiiCh
 Voici donc le résultat : 
 
 
-<iframe src="http://player.vimeo.com/video/15865874" width="700" height="393" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/15865874" width="700" height="393" allowFullScreen></iframe>
 
 
 A vous de jouer :-)

@@ -11,7 +11,7 @@
     <header>
         <h1>{{article.title}}</h1>
         <span class="publication-date">
-            <time pubdate="pubdate" datetime="{{article.locale_date}}">{{article.locale_date|capitalize}}</time>, Alexis Couronne - 
+            <time datetime="{{article.date|strftime('%Y-%m')}}">{{article.locale_date|capitalize}}</time>, Alexis Couronne - 
             [
             {% for tag in article.tags %}
                 <a href="{{tag.url}}">{{tag}}</a>{% if not loop.last %} :: {% endif %}

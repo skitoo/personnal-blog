@@ -17,4 +17,4 @@ Une fois votre dessin terminé, vous pouvez générer une tilemap au format xml 
 
 Trève de blabla, voici une petite vidéo de démontration.
 
-<iframe width="700" height="393" src="http://www.youtube.com/embed/wYowgVn5_8w" frameborder="0" allowfullscreen></iframe>
+<iframe width="700" height="393" src="http://www.youtube.com/embed/wYowgVn5_8w" allowfullscreen></iframe>

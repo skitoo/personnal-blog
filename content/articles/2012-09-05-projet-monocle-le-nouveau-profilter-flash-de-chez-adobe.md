@@ -9,4 +9,4 @@ Le but de ce projet est simple : vous permettre de détecter les goulots d'étra
 
 Encore en beta interne chez Adobe, à ce jour aucune date de sortie n'a été annoncée concernant ce projet. Pour patienter, une vidéo de présentation de l'application réalisée par [Thibault Imbert](http://www.bytearray.org) vous est proposée.
 
-<iframe src="http://player.vimeo.com/video/46917940" width="700" height="393" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/46917940" width="700" height="393" allowFullScreen></iframe>
