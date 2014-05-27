@@ -46,3 +46,6 @@ JINJA_FILTERS = {
 }
 
 DISQUS_SITENAME = 'alexiscouronne'
+
+PIWIK = 1
+PIWIK_URL = 'stats.skitoo.net'
