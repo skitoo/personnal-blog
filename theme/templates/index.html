@@ -23,9 +23,17 @@
         {% endfor %}
         </ul>
     {% endfor %}
+    <div>La suite du journal dans <a href="journal.html" title="Journal">les archives</a>.</div>
 </div>
 
-<div>La suite du journal dans <a href="journal.html" title="Journal">les archives</a>.</div>
+<div class="tags">
+    <h2>Mots-clés</h2>
+    <ul>
+        {% for tag, articles in tags|sort %}
+        <li><a href="{{tag.url}}">{{tag}} <small>[{{articles|length}}]</small></a></li>
+        {% endfor %}
+    </ul>
+</div>
 
 {% include "follow-me.html" %}
 {% endblock %}
