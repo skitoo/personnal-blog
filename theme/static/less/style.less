@@ -388,6 +388,36 @@ article{
 .myicons();
 
 
+.tags {
+    ul{
+        list-style : none;
+        max-width: 80%;
+    }
+    li{
+        display: inline-block;
+        float: none;
+        border: 1px solid @dark-orange;
+        background-color: @dark-grey;
+        padding: 1px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-left: 3px;
+        .border-radius();
+
+        a {
+            font-style: bold;
+            color: @soft-grey;
+
+            small {
+                color: @dark-orange;
+            }
+        }
+        a:hover {
+            color: @dark-orange;
+        }
+    }
+}
+
 
 
 // ------------------------------------------------------------------------------ // 

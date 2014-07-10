@@ -5302,6 +5302,33 @@ article .pagination a:hover {
 .icon-commentsmiley:before {
   content: '\f5dd';
 }
+.tags ul {
+  list-style: none;
+  max-width: 80%;
+}
+.tags li {
+  display: inline-block;
+  float: none;
+  border: 1px solid #ffa500;
+  background-color: #4d4d4d;
+  padding: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.tags li a {
+  font-style: bold;
+  color: #9c9c9c;
+}
+.tags li a small {
+  color: #ffa500;
+}
+.tags li a:hover {
+  color: #ffa500;
+}
 @media screen and (max-width: 1024px) {
   .icon {
     font-size: 100px;
