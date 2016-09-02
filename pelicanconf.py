@@ -44,8 +44,3 @@ DEFAULT_PAGINATION = 10
 JINJA_FILTERS = {
     'limit': lambda list, number=10: list[0:number],
 }
-
-DISQUS_SITENAME = 'alexiscouronne'
-
-PIWIK = 1
-PIWIK_URL = 'stats.skitoo.net'
