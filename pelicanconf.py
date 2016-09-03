@@ -18,7 +18,7 @@ DEFAULT_DATE_FORMAT = '%B %Y'
 DEFAULT_LANG = u'fr'
 CURRENT_DATE = datetime.datetime.now()
 
-ARTICLE_DIR = 'articles'
+ARTICLE_PATHS = ['articles']
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = TRANSLATION_FEED_ATOM = None
