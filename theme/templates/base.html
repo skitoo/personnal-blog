@@ -7,7 +7,7 @@
     <link rel="canonical" href="{% block current_url %}{% endblock %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ AUTHOR }}">
-    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="Skitoo ATOM Feed" />
+    <link href="{{ SITE_URL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="Skitoo ATOM Feed" />
     {% block css %}
     <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet">
     <link href="{{ SITEURL }}/theme/css/monokai.css" rel="stylesheet">
@@ -57,7 +57,7 @@
     {% block footer %}
         <ul>
             <li><a href="mailto:alexis.couronne@gmail.com" title="Mail de Contact"><i class="icon-envelope"></i> Contact</a></li>
-            <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="Flux RSS"><i class="icon-rss"></i> RSS</a></li>
+            <li><a href="{{ SITE_URL }}/{{ FEED_ALL_ATOM }}" title="Flux RSS"><i class="icon-rss"></i> RSS</a></li>
             <li><a href="https://github.com/skitoo/" title="Compte Github"><i class="icon-github"></i> Github</a></li>
             <li><a href="https://twitter.com/skitoo/" title="Compte Twitter"><i class="icon-twitter"></i> Twitter</a></li>
             <li><a href="{{ SITEURL }}/journal.html"><i class="icon-book"></i> Journal</a></li>
