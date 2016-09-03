@@ -18,14 +18,14 @@ My blog relies on several outside packages and programs to run.
 Clone the project
 
 ```
-  $ git@github.com:skitoo/personnal-blog.git
-  $ cd personnal-blog
+$ git@github.com:skitoo/personnal-blog.git
+$ cd personnal-blog
 ```
 
 Run docker-compose
 
 ```
-  $ docker-compose up
+$ docker-compose up
 ```
 
 Add entry in your `/etc/hosts` file:
