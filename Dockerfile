@@ -1,21 +1,18 @@
-FROM debian:wheezy
+FROM python:3-onbuild
 MAINTAINER Alexis Couronne
 
-
 RUN apt-get update -y
-RUN apt-get install -y nginx python python-pip
+RUN apt-get install -y locales
 
-ADD . /app
-WORKDIR /app
+# Set the locale
+RUN sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
+    echo 'LANG="fr_FR.UTF-8"'>/etc/default/locale && \
+    dpkg-reconfigure --frontend=noninteractive locales && \
+    update-locale LANG=fr_FR.UTF-8
 
-RUN pip install -r requirements.txt
-RUN make html
-RUN cp /app/nginx/default /etc/nginx/sites-available/default
+ENV LANG fr_FR.UTF-8
 
-# forward request and error logs to docker log collector
-RUN ln -sf /dev/stdout /var/log/nginx/access.log
-RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
-EXPOSE 80
+RUN pelican content/ -o /var/www/blog/ -s pelicanconf.py
 
-CMD ["nginx", "-g", "daemon off;"]
+VOLUME ["/usr/src/app", "/var/www/blog"]

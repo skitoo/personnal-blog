@@ -9,6 +9,7 @@ DELETE_OUTPUT_DIRECTORY = True
 AUTHOR = u'Alexis Couronne'
 SITENAME = u'Skitoo'
 SITEURL = 'http://skitoo.net'
+EMAIL = 'alexis.couronne@gmail.com'
 
 THEME = 'theme'
 
@@ -18,7 +19,7 @@ DEFAULT_DATE_FORMAT = '%B %Y'
 DEFAULT_LANG = u'fr'
 CURRENT_DATE = datetime.datetime.now()
 
-ARTICLE_DIR = 'articles'
+ARTICLE_PATHS = ['articles']
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = TRANSLATION_FEED_ATOM = None
@@ -44,8 +45,3 @@ DEFAULT_PAGINATION = 10
 JINJA_FILTERS = {
     'limit': lambda list, number=10: list[0:number],
 }
-
-DISQUS_SITENAME = 'alexiscouronne'
-
-PIWIK = 1
-PIWIK_URL = 'stats.skitoo.net'
