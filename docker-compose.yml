@@ -19,5 +19,5 @@ services:
   blog:
     build: .
     volumes:
-      - .:/app
-    command: make regenerate
+      - .:/usr/src/app
+    command: pelican content/ -o /var/www/blog/ -s pelicanconf.py -r
