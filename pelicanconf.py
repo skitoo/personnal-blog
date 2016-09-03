@@ -9,6 +9,7 @@ DELETE_OUTPUT_DIRECTORY = True
 AUTHOR = u'Alexis Couronne'
 SITENAME = u'Skitoo'
 SITEURL = 'http://skitoo.net'
+EMAIL = 'alexis.couronne@gmail.com'
 
 THEME = 'theme'
 
