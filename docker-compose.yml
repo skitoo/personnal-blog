@@ -1,0 +1,23 @@
+
+version: '2'
+
+services:
+  nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - blog
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/blog.cert.key:/etc/ssl/certs/blog.cert.key
+      - ./nginx/blog.cert.cert:/etc/ssl/certs/blog.cert.cert
+    volumes_from:
+      - blog:ro
+
+  blog:
+    build: .
+    volumes:
+      - .:/app
+    command: make regenerate
