@@ -10,7 +10,7 @@ météorologique](http://fr.wikipedia.org/wiki/Ballon_sonde) embarquant une peti
 téléphone équipé d'un GPS afin de suivre les déplacements de l'engin.
 Voici donc la petite vidéo de l'exploit :
 
-<iframe src="http://player.vimeo.com/video/15091562" width="700" height="393"></iframe>
+<iframe src="https://player.vimeo.com/video/15091562" width="700" height="393"></iframe>
 
 Je dois avouer que ce genre de projet m'intéresserait énormément ! A
 voir donc quels seraient les moyens techniques nécessaires et quel est

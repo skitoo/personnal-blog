@@ -12,6 +12,6 @@ Cette année nous avons présenté au mois de Juin une pièce écrite par [Denis
 *"Lieu des au revoir et des adieux, lieu aux histoires meurtries, aux décisions décousues, aux envols vainqueurs, lieu de toutes les souffrances, de toutes les interrogations et de tous les espoirs, lieu des larmes chaudes et des serments hâtifs, lieu des derniers sourires, des paroles qu'on oubliera jamais et des baisers donnés pour la vie, voici la gare. La gare déclinée sous toutes ses formes, de la plus banale à la plus inattendue, grouillante d'humanité. Une multitude de trajectoires individuelles juxtaposées par la magie du théâtre."*
 
 
-<iframe width="700" height="395" src="http://www.youtube.com/embed/a0uyOulyUJs" allowfullscreen></iframe>
+<iframe width="700" height="395" src="https://www.youtube.com/embed/a0uyOulyUJs" allowfullscreen></iframe>
 
 C'est un spectacle réalisé par des débutants donc un peu d'indulgence :)

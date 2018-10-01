@@ -5,7 +5,7 @@ Tags: Jeu vidéo, Pixel Art
 
 
 Voici la petite découverte de la journée : [Pyxel Edit](http://pyxeledit.com/) un outil de création de [pixel art](http://fr.wikipedia.org/wiki/Pixel_art).
-Facile à prendre en main, il ravira tous les adeptes du dessin pixel par pixel. 
+Facile à prendre en main, il ravira tous les adeptes du dessin pixel par pixel.
 
 Cette application, développée à l'aide de la technologie Adobe Air, fonctionne sous Windows, Mac et Linux. Encore en beta publique elle est distribuée gratuitement !
 
@@ -17,4 +17,4 @@ Une fois votre dessin terminé, vous pouvez générer une tilemap au format xml 
 
 Trève de blabla, voici une petite vidéo de démontration.
 
-<iframe width="700" height="393" src="http://www.youtube.com/embed/wYowgVn5_8w" allowfullscreen></iframe>
+<iframe width="700" height="393" src="https://www.youtube.com/embed/wYowgVn5_8w" allowfullscreen></iframe>

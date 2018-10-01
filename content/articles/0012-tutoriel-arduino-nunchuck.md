@@ -35,7 +35,7 @@ Pour la réalisation des schémas qui suivent j'ai utilisé un logiciel bien pra
 
 Le composant "Nunchuck" n'étant pas encore disponible dans la bibliothèque de Fritzing j'ai pris un composant assez proche pour le représenter dans notre schéma.
 
-####Vue de la platine d'essai 
+####Vue de la platine d'essai
 
 ![Platine d'essai](|filename|/images/arduino-nunchuck-servo-platine.png)
 
@@ -52,7 +52,7 @@ Comme vous pouvez le constater, le schéma de ce montage est très simple !
     #include <Wire.h>;
 
     // Doit être ajusté en fonction de chaque nunchuck
-    #define ZEROX 530  
+    #define ZEROX 530
     #define ZEROY 530
     #define ZEROZ 530
 
@@ -67,32 +67,32 @@ Comme vous pouvez le constater, le schéma de ce montage est très simple !
 
     // définition d'un tableau de données
     uint8_t data[6];
-     
-    void setup() 
-    { 
+
+    void setup()
+    {
       // on attache le servomoteur à la pin 11 (PWM)
       servomoteur.attach(11);
-      
+
       // initialisation du nunchuck
       Wire.begin();
-      
+
       Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS);
       Wire.write(0xF0);
       Wire.write(0x55);
       Wire.endTransmission();
-      
+
       Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS);
       Wire.write(0xFB);
       Wire.write(0x00);
       Wire.endTransmission();
-    } 
-     
-     
-    void loop() 
-    { 
+    }
+
+
+    void loop()
+    {
         // on demande 6 octets au nunchuck
         Wire.requestFrom(WII_NUNCHUK_I2C_ADDRESS, 6);
-        
+
         counter = 0;
         // tant qu'il y a des données
         while(Wire.available())
@@ -100,12 +100,12 @@ Comme vous pouvez le constater, le schéma de ce montage est très simple !
           // on récupère les données
           data[counter++] = Wire.read();
         }
-        
+
         // on réinitialise le nunchuck pour la prochaine demande
         Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS);
         Wire.write(0x00);
         Wire.endTransmission();
-        
+
         if(counter >= 5)
         {
           // on extrait les données
@@ -130,11 +130,10 @@ Ce code a été inspiré par [celui-ci](https://github.com/chrisgilmerproj/WiiCh
 
 ##Résultat
 
-Voici donc le résultat : 
+Voici donc le résultat :
 
 
-<iframe src="http://player.vimeo.com/video/15865874" width="700" height="393" allowFullScreen></iframe>
-
+<iframe src="https://player.vimeo.com/video/15865874" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 A vous de jouer :-)
 
