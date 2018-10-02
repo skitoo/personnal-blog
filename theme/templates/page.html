@@ -14,10 +14,3 @@
 </div>
 {% include "follow-me.html" %}
 {% endblock %}
-
-{% if page.title == 'Photos' %}
-    {% block javascript %}
-    {{super()}}
-    <script src="{{ SITEURL }}/theme/js/gallery.js" type="text/javascript" charset="utf-8" ></script>
-    {% endblock %}
-{% endif %}
