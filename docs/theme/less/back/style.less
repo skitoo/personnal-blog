@@ -1,0 +1,401 @@
+
+@import "elements.less";
+
+//**********************************************************
+// fonts
+//**********************************************************
+
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../font/helveticaneuelt-webfont.eot');
+    src: url('../font/helveticaneuelt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/helveticaneuelt-webfont.woff') format('woff'),
+         url('../font/helveticaneuelt-webfont.ttf') format('truetype'),
+         url('../font/helveticaneuelt-webfont.svg#HelveticaNeueLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HybreaRegular';
+    src: url('../font/ufonts.com_hybrea-webfont.eot');
+    src: url('../font/ufonts.com_hybrea-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ufonts.com_hybrea-webfont.woff') format('woff'),
+         url('../font/ufonts.com_hybrea-webfont.ttf') format('truetype'),
+         url('../font/ufonts.com_hybrea-webfont.svg#HybreaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//**********************************************************
+// variables
+//**********************************************************
+
+@dark-orange:#ffa500;
+@middle-orange:#ffbc40;
+@soft-orange:#ffce73;
+@white:#ffffff;
+@black:#000;
+@soft-grey:#9c9c9c;
+@middle-grey:rgb(10, 10, 10);
+@dark-grey:rgb(77, 77, 77);
+
+//**********************************************************
+// snippets
+//**********************************************************
+
+.background-textured-with-gradient(@texture, @firstcolor, @secondcolor){
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @firstcolor), color-stop(100%, @secondcolor)), url(@texture);
+	background-image: -webkit-linear-gradient(top, @firstcolor, @secondcolor), url(@texture);
+	background-image: -moz-linear-gradient(top, @firstcolor, @secondcolor), url(@texture);
+	background-image: -ms-linear-gradient(top, @firstcolor, @secondcolor), url(@texture);
+	background-image: -o-linear-gradient(top, @firstcolor, @secondcolor), url(@texture);
+	background-image: linear-gradient(top, @firstcolor, @secondcolor), url(@texture);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#383839', endColorstr='#1c1c1c', GradientType=0);
+}
+
+//**********************************************************
+// native
+//**********************************************************
+
+
+body{
+	.background-textured-with-gradient('../img/hexagone.png', rgba(77, 77, 77, 0.7), rgba(10, 10, 10, 0.7));
+	color:@soft-grey;
+	font-family: 'HelveticaNeueLight';
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+img{
+	border:1px solid @black;
+	padding: 5px;
+	background: @white;
+	.drop-shadow(0, 0, 8px, 0.75);
+	//max-width: none;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'HybreaRegular';
+	color:@middle-orange;
+	font-weight: normal;
+	margin-bottom:30px;
+}
+
+h1{
+	border-bottom: 1px solid @dark-grey;
+}
+
+h2{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+a{
+	color:@soft-orange;
+}
+
+a:hover{
+	color:@dark-orange;
+	text-decoration: none;
+}
+
+code{
+	color:@dark-grey;
+	background: @soft-grey;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	font-size: 14px;
+}
+
+ul{
+	list-style-image : url(../img/puce.png);
+}
+li{
+	margin-bottom: 10px;
+}
+
+hr{
+	color: @dark-grey;
+	background-color: @dark-grey;
+	height: 1px;
+	border: 0;
+}
+
+p{
+	margin-bottom: 20px;
+}
+
+strong{
+	font-weight: bolder;
+	color:#bbb;
+}
+
+article{
+	h1{
+			margin-bottom: 0px;
+		}
+
+	h2, h3, h4, h5, h6{
+		margin-bottom: 5px;
+	}
+	
+	header{
+		margin-bottom: 30px;
+
+		.publication-date{
+			font-style: italic;
+			font-size: 14px;
+		}
+	}
+	footer{
+		margin-top:30px;
+	}
+
+	.hr{
+		color: @dark-orange;
+		background-color: @dark-orange;
+		height: 1px;
+		border: 0;
+	}
+
+	img{
+		display: block;
+		//margin:auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+
+iframe{
+	display: block;
+	//margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+table{
+	border: 1px solid @soft-grey;
+	border-collapse: collapse;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+th, td{
+	border: 1px solid @soft-grey;
+	padding: 10px;
+}
+
+th{
+	background: @dark-grey;
+}
+
+figure{
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+figcaption{
+	margin-top: 20px;
+	font-size: 1em;
+	text-align: center;
+
+	.info{
+		font-size: 0.9em;
+		font-style: italic;
+		color:@dark-grey;
+	}
+}
+
+
+
+//**********************************************************
+// class
+//**********************************************************
+
+/*.navbar .container{
+	width:1170px;
+}*/
+
+.pagination{
+	a{
+		border:none;
+		font-size: 1em;
+		padding: 0 5px;
+	}
+	a:hover{
+		background: none;
+	}
+}
+
+.presentation-icon{
+	font-size:180px;
+	line-height: 160px;
+}
+
+.index-row{
+	margin-bottom: 40px;
+}
+
+.archive-year{
+	font-size: 1.4em;
+	font-family: 'HybreaRegular';
+	margin: 40px 0 20px 25px;
+}
+
+.center-block{
+	display: block;
+	margin: auto;
+}
+
+
+.navbar .btn-navbar{
+	margin-top: 30px;
+}
+
+.footer-link{
+	margin-top: 40px;
+	li{
+		display: inline;
+		a{
+			padding: 9px 10px;
+			color: @soft-grey;
+		}
+		a:hover{
+			color:@white;
+		}
+	}
+}
+
+
+
+//**********************************************************
+// id
+//**********************************************************
+
+#header{
+	margin-bottom: 30px;
+	.navbar-inner{
+		background: #212121 url("../img/black_linen_v2.png") repeat;
+		border-bottom: 3px solid @dark-orange;
+		min-height:90px;
+		.drop-shadow(0px, 1px, 20px, 0.75);
+		border-radius: 0;
+	}
+
+	.brand{
+		margin-left: 0;
+		margin-top:10px;
+		padding: 0;
+		padding-top: 8px;
+	}
+
+	.nav{
+		margin-top: 25px;
+		font-family: "HybreaRegular";
+		font-size: 1.3em;
+
+		li{
+			margin: 0 5px 0 5px;
+		}
+
+		a{
+			color:@middle-orange;
+			letter-spacing: 0.5pt;
+
+		}
+		a:hover{
+			.rotation(5deg);
+			color:@dark-orange;
+		}
+	}
+}
+
+
+
+
+#logo{
+	margin-top:23px;
+	margin-left: 10px;
+	display: block;
+	img{
+		background: none;
+		border:none;
+		padding: none;
+		.drop-shadow(0, 0, 0, 0);
+	}
+
+}
+
+
+#content{
+	min-height: 700px;
+}
+
+
+#footer{
+	margin-bottom: 0px;
+	.navbar-inner{
+		background: url('../img/black_linen_v2.png') repeat;
+		border-top: 1px solid @dark-orange;
+		height: 150px;
+		margin-top: 50px;
+		border-radius: 0;
+
+		.nav{
+			margin-top:30px;
+		}
+	}
+
+	#copyright{
+		//float: right;
+		margin-top:40px;
+		font-size:13px;
+	}
+}
+
+#ticket-content{
+	margin-bottom: 30px;
+}
+
+#disqus_thread{
+	width:80%;
+
+	#footer{
+		display:none;
+	}
+}
+
+#presentation{
+	font-size: 30px;
+	line-height: 1.2em;
+}
+
+
+@media (max-width: 767px) {
+	.navbar{
+	    margin-left: -20px;
+	    margin-right: -20px;
+	}
+
+}
+@media (max-width: 979px) {
+	#header{
+	 	.nav{
+	 	 	a:hover{
+				background: none;
+				.rotation(0deg);
+			}
+		}
+	}
+	.presentation-icon{
+		font-size:140px;
+	}
+
+	#footer{
+		#copyright{
+			margin-top: 10px;
+		}
+	}
+}
+

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tutoriel - Logger du framework AS3 Skitools</title>
+    <meta name="description" content="">
+    <link rel="canonical" href="./tutoriel-logger-du-framework-as3-skitools.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexis Couronne">
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Skitoo ATOM Feed" />
+    <link href="./theme/css/style.css" rel="stylesheet">
+    <link href="./theme/css/whhg.css" rel="stylesheet">
+    <link href="./theme/css/monokai.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="./theme/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./theme/img/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./theme/img/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./theme/img/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="./theme/img/apple-touch-icon-57.png">
+  </head>
+
+  <body>
+    <div class="container">
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="." title="Skitoo.net"><img src="./theme/img/logo-skitoo.png" alt="Alexis Couronne" width="140" height="44"></a>
+            </div>
+            <ul class="menu">
+              <li><a href="./journal.html">journal</a></li>
+              <li><a href="./projets.html">projets</a></li>
+              <li><a href="./colophon.html">colophon</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="content" class="content">
+        <div id="sidebar" class="sidebar">
+        <div class="icon icon-flashplayer"></div>
+        </div>
+        <div id="main" class="main">
+<article>
+    <header>
+        <h1>Tutoriel - Logger du framework AS3 Skitools</h1>
+        <span class="publication-date">
+            <time datetime="2010-08">Août 2010</time>, Alexis Couronne - 
+            [
+                <a href="tag/flashas3.html">Flash/AS3</a> ::                 <a href="tag/tutoriel.html">Tutoriel</a>            ]
+        </span>
+    </header>
+    <div id="ticket-content" class="ticket-content">
+        <p>Voilà bientôt un an et demi que je développe en AS3 dans un cadre
+professionnel. Au cour de mon apprentissage sur la technologie Flash,
+j'ai développé un framework contenant plusieurs outils. Celui-ci répond
+au doux nom de <a href="http://bitbucket.org/skitoo/skitools/wiki/Home">Skitools</a> et il est hébergé sur un dépôt <a href="http://mercurial.selenic.com">Mercurial</a>
+du fabuleux site <a href="http://bitbucket.org">Bitbucket</a>. Afin d'en faire profiter le plus grand
+nombre de personnes, j'ai décidé de me lancer dans une série de
+tutoriels expliquant les différentes briques du framework. Aujourd'hui
+nous parlerons du Logger. Le logger de Skitools est fortement inspiré du
+très connu système de journalisation <a href="http://logging.apache.org/log4j/1.2/">Log4j</a> du monde Java. Tout comme
+ce dernier, Skitools offre un système hautement configurable, que ce
+soit au niveau des entrées d'enregistrements que la destination de ces
+derniers.</p>
+<h2>Logger</h2>
+<p>Le logger est l'entité de base du système de journalisation. Il est
+représenté par la classe <strong>org.skitools.logger.Logger</strong>.</p>
+<div class="highlight"><pre><span></span><span class="kd">package</span>
+<span class="p">{</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">Logger</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nx">MaClasse</span>
+    <span class="p">{</span>
+        <span class="kd">private</span> <span class="kd">static</span> <span class="k">var</span> <span class="nx">logger</span> <span class="o">:</span> <span class="nx">Logger</span> <span class="o">=</span> <span class="nx">Logger</span><span class="p">.</span><span class="nx">getLogger</span><span class="p">(</span><span class="nx">MaClasse</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Comme vous pouvez le voir la déclaration d'un logger est très simple.
+Elle s'éffectue par la méthode statique <strong>Logger.getLogger</strong>. Celle-ci
+prend en paramètre le nom de la classe émettrice d'enregistrement. Vous
+pouvez donner un nom différent mais il est préférable d'utiliser la
+classe qui sera utilisée par le système de hiérarchie et de
+configuration.</p>
+<h2>Les niveaux de journalisation</h2>
+<p>Tout comme Log4J, Skitools dispose d'une notion de niveau de
+journalisation. La classe <strong>org.skitools.logger.Level</strong> permet de
+définir l'importance du message à journaliser. Lors de la configuration,
+il est possible de spécifier des filtres pour chaque logger. Ainsi, le
+message sera journalisé uniquement si le niveau de votre message est
+supérieur ou égal au niveau du filtre associé à ce même logger. Skitools
+propose 5 niveaux de journalisation :</p>
+<ul>
+<li><strong>DEBUG</strong> - Utilisé pour déboguer l'application</li>
+<li><strong>INFO</strong> - Utilisé pour informer l'utilisateur du bon déroulement de l'application</li>
+<li><strong>WARN</strong> - Cette avertissement indique une incohérence dans l'application qui peut être liée à un problème de configuration. Des fonctionnements inattendus peuvent surgir.</li>
+<li><strong>ERROR</strong> - Indique qu'une erreur s'est produite. Celle-ci n'entraînant pas l'arrêt du fonctionnement de l'application.</li>
+<li><strong>FATAL</strong> - Indique qu'une erreur très grave c'est produite. Empêchant ainsi l'application de continuer à fonctionner.</li>
+</ul>
+<p>Deux autres niveaux de journalisation existent dans Skitools. Cependant
+ils ne sont utilisés que lors de la configuration du système :</p>
+<ul>
+<li><strong>OFF</strong> - Indique qu'aucun message n'est journalisé.</li>
+<li><strong>ALL</strong> - Indique que tous les messages sont journalisés.</li>
+</ul>
+<p>Bien-sûr, ces niveaux sont proposés de base dans Skitools, mais rien ne
+vous empêche de créer les vôtres.</p>
+<h2>Journalisation d'un message</h2>
+<p>Pour journaliser un message plusieurs méthodes de l'objet Logger
+s'offrent à vous :</p>
+<div class="highlight"><pre><span></span><span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Level</span><span class="p">.</span><span class="nx">DEBUG</span><span class="o">,</span> <span class="s2">&quot;petit message de débug&quot;</span><span class="p">);</span>
+<span class="c1">// la même chose via la méthode debug</span>
+<span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s2">&quot;petit message de débug&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Bien-sûr ces deux fonctionnements sont applicables pour les 4 autres
+niveaux : <strong>INFO</strong>, <strong>WARN</strong>, <strong>ERROR</strong>, et <strong>FATAL</strong>. Il est possible de
+spécifier un objet <strong>IFormatter</strong> pour un message en particulier. Nous
+verrons ce que sont les formatters dans la suite de cet article.</p>
+<h2>Sorties d'écriture du système de journalisation</h2>
+<p>Nous avons vu comment créer des messages associés à un niveau.
+Maintenant voyons comment les envoyer vers les différentes sorties
+d'écritures proposées par Skitools. Ces sorties sont représentées par
+l'interface <strong>org.skitools.logger.layout.ILayout</strong>. A ce jour 4 implémentations sont fournies avec Skitools :</p>
+<ul>
+<li><strong>org.skitools.logger.layout.TraceLayout</strong> - Les messages sont envoyés vers la méthode <strong>trace</strong> de Flash. Le plugin <a href="https://addons.mozilla.org/en-US/firefox/addon/3469/">FlashTracer</a> de Firefox vous permet de récupérer la sortie en écriture de la fonction <em>trace</em>.</li>
+<li><strong>org.skitools.logger.layout.AirLoggerLayout</strong> - Les messages sont envoyés vers l'application Air <a href="http://code.google.com/p/airlogger/">AirLogger</a> développé par <a href="http://book.abe.free.fr/blog/">Cédric Néhémie</a> (un ancien collègue de chez Prizee).</li>
+<li><strong>org.skitools.logger.layout.FlashInspectorLayout</strong> - Les messages sont envoyés vers l'application Flash FlashInspector développé par <a href="http://www.luminicbox.com">Pablo Constantini</a>.</li>
+<li><strong>org.skitools.logger.layout.FireBugLayout</strong> - Les messages sont envoyés vers l'incontournable plugin <a href="http://getfirebug.com/">FireBug</a> de Firefox. Bien entendu votre SWF doit être lu via le navigateur pour que les messages apparaissent dans le module "Console" du plugin.</li>
+</ul>
+<p>Nous verrons dans la suite de l'article la mise en place de ces différents layouts.</p>
+<h2>Mise en forme des messages</h2>
+<p>Skitools permet de formater les messages de journalisation. Cette action
+se réalise avant leur envoi vers un layout. La mise en forme des
+messages se fait par les classes implémentant l'interface
+<strong>org.skitools.logger.formatter.IFormatter</strong>. Ces objets sont associés
+aux layouts. Skitools vous propose 2 formatters :</p>
+<ul>
+<li><strong>org.skitools.logger.formatter.SimpleFormatter</strong> - Un formatter très simple : il passe au layout le corps du message tel qui l'est. Ce formatter est utilisé par défaut par tous les layouts.</li>
+<li><strong>org.skitools.logger.formatter.PatternFormatter</strong> - Ce formatter est plus avancé dans son fonctionnement. Celui-ci prend en paramètre de son constructeur un pattern (sous forme de String) qui va définir la forme que va prendre le message une fois envoyé au layout.</li>
+</ul>
+<p>Exemple pour le pattern <strong>%L [%C] %M</strong></p>
+<div class="highlight"><pre><span></span><span class="k">var</span> <span class="nx">logger</span> <span class="o">:</span> <span class="nx">Logger</span> <span class="o">=</span> <span class="nx">Logger</span><span class="p">.</span><span class="nx">getLogger</span><span class="p">(</span><span class="s2">&quot;root&quot;</span><span class="p">);</span>
+<span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s2">&quot;Message A&quot;</span><span class="p">);</span>
+<span class="nx">logger</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">&quot;Message B&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>résultat :</p>
+<div class="highlight"><pre><span></span>DEBUG [root] Message A
+WARN [root] Message B
+</pre></div>
+
+
+<p>Tableau récapitulatif des balises :</p>
+<table>
+<thead>
+<tr>
+<th align="center">Balise</th>
+<th>Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>%C</strong></td>
+<td>Le nom du logger émetteur du message</td>
+</tr>
+<tr>
+<td align="center"><strong>%D</strong></td>
+<td>La date d'émission du message. Cette balise est un peu particulière car elle accepte une option : <strong>%D{dd/MM/yyyy - HH:mm:ss}</strong> Cette option permet de spécifier comme la date sera affichée. Cette option est analysée à l'aide la classe <strong>org.skitools.utils.DateFormatter</strong> je vous conseille donc de jeter un coup d'oeil à la documentation de cette dernière</td>
+</tr>
+<tr>
+<td align="center"><strong>%L</strong></td>
+<td>Le niveau du message</td>
+</tr>
+<tr>
+<td align="center"><strong>%M</strong></td>
+<td>Le corps du message</td>
+</tr>
+</tbody>
+</table>
+<h2>L'héritage des niveaux</h2>
+<p>Dans Skitools chaque Logger hérite du Level de son parent à moins bien
+sur qu'on lui est explicitement spécifié un Level. Seul le logger
+"root", défini par le système, ne possède pas de parent. Ce qui induit
+que par défaut tous les logger héritent du Level du "root". Prenons l'exemple suivant : </p>
+<p><img alt="Héritage logger" src="./images/heritage-logger.jpg" /> </p>
+<p>Dans cet exemple nous spécifions que <strong>root</strong> à le niveau <strong>WARN</strong>. Ses héritiers (<strong>org</strong> et <strong>org.skitools</strong>) héritent tous de ce même level.
+En spécifiant que <strong>org.skitools.mvc </strong>à un niveau d'<strong>INFO</strong> on casse la chaîne d'héritage, donc lui et ses héritiers (<strong>org.skitools.mvc.view</strong>) auront le niveau <strong>INFO</strong>.
+<strong>com.scopart.utils</strong> devrait par défaut avoir le niveau <strong>WARN</strong> (héritage de <strong>root</strong>), mais comme pour <strong>org.skitools.mvc </strong>on casse la chaîne d'héritage en spécifiant <strong>FATAL</strong> comme niveau.
+Si <strong>com.scopart.utils</strong> a un jour des enfants, ils hériteront donc de ce même niveau. </p>
+<p>Voyons maintenant ce qui se passe si par exemple le logger <strong>org.skitools</strong> émet un message :</p>
+<ul>
+<li>Les messages <strong>DEBUG</strong> et <strong>INFO</strong> ne seront pas journalisés car ils possèdent un niveau inférieur à celui spécifié dans <strong>org.skitools</strong> (<strong>WARN</strong>).</li>
+<li>Les messages <strong>WARN</strong>, <strong>ERROR</strong> et <strong>FATAL</strong> seront journalisés car ils sont supérieur ou égal à celui spécifié dans <strong>org.skitools</strong>.</li>
+</ul>
+<h2>Configuration du système de journalisation</h2>
+<p>Voici un petit exemple de configuration du système de journalisation de
+Skitools :</p>
+<div class="highlight"><pre><span></span><span class="kd">package</span> <span class="nx">com</span><span class="p">.</span><span class="nx">scopart</span>
+<span class="p">{</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">Level</span><span class="o">;</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">Logger</span><span class="o">;</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">Logging</span><span class="o">;</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">formatter</span><span class="p">.</span><span class="nx">PatternFormatter</span><span class="o">;</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">layout</span><span class="p">.</span><span class="nx">FirebugLayout</span><span class="o">;</span>
+    <span class="kd">import</span> <span class="nx">org</span><span class="p">.</span><span class="nx">skitools</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">layout</span><span class="p">.</span><span class="nx">TraceLayout</span><span class="o">;</span>
+
+    <span class="kd">import</span> <span class="nx">flash</span><span class="p">.</span><span class="nx">display</span><span class="p">.</span><span class="nb">Sprite</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nx">MaClasse</span> <span class="kd">extends</span> <span class="nb">Sprite</span>
+    <span class="p">{</span>
+        <span class="kd">private</span> <span class="kd">static</span> <span class="k">var</span> <span class="nx">logger</span> <span class="o">:</span> <span class="nx">Logger</span> <span class="o">=</span> <span class="nx">Logger</span><span class="p">.</span><span class="nx">getLogger</span><span class="p">(</span><span class="nx">MaClasse</span><span class="p">);</span>
+
+        <span class="kd">public</span> <span class="kd">function</span> <span class="nx">MaClasse</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">var</span> <span class="nx">logging</span> <span class="o">:</span> <span class="nx">Logging</span> <span class="o">=</span> <span class="nx">Logging</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">();</span>
+
+            <span class="c1">// enregistrement d&#39;un TraceLayout dans le système.</span>
+            <span class="c1">// Il utilisera par défaut org.skitools.logger.formatter.SimplementFormatter</span>
+            <span class="nx">logging</span><span class="p">.</span><span class="nx">addLayout</span><span class="p">(</span><span class="k">new</span> <span class="nx">TraceLayout</span><span class="p">());</span>
+            <span class="c1">// enregistrement d&#39;un FirebugLayout dans le système.</span>
+            <span class="c1">// Il utilisera un PatternFormatter pour mettre en forme les messages</span>
+            <span class="nx">logging</span><span class="p">.</span><span class="nx">addLayout</span><span class="p">(</span><span class="k">new</span> <span class="nx">FirebugLayout</span><span class="p">(</span><span class="k">new</span> <span class="nx">PatternFormatter</span><span class="p">(</span><span class="s2">&quot;%L [%C] %M&quot;</span><span class="p">)));</span>
+
+            <span class="c1">// on spécifie un level pour le logger MaClasse</span>
+            <span class="nx">Logger</span><span class="p">.</span><span class="nx">getLogger</span><span class="p">(</span><span class="nx">MaClasse</span><span class="p">).</span><span class="nx">setLevel</span><span class="p">(</span><span class="nx">Level</span><span class="p">.</span><span class="nx">ERROR</span><span class="p">);</span>
+
+            <span class="c1">// ce message ne sera journalisé car inférieur</span>
+            <span class="c1">// à ERROR spécifié dans le Logger</span>
+            <span class="nx">logger</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s2">&quot;message 1&quot;</span><span class="p">);</span>
+
+            <span class="c1">// les deux messages suivant seront journalisé</span>
+            <span class="c1">// car supérieur ou égal à ERROR</span>
+            <span class="nx">logger</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;message 2&quot;</span><span class="p">);</span>
+            <span class="nx">logger</span><span class="p">.</span><span class="nx">fatal</span><span class="p">(</span><span class="s2">&quot;message 3&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>Conclusion</h2>
+<p>Ce tutoriel touche à sa fin, j'espère qu'il vous aura permis de mieux
+appréhender le système de journalisation proposé par Skitools. Un
+tutoriel sur la partie MVC devrait voir le jour d'ici peu. Si vous avez
+des corrections ou suggestions concernant cet article ou le framework
+Skitools, merci de me les faire parvenir en commentaire.</p>
+    </div>
+    <hr class="hr">
+    <div>
+        <ul class="pagination">
+                <li><a href="./vaisseau-spatial-fait-maison.html" rel="next">Suivant &raquo;</a></li>
+        </ul>
+    </div>
+    <footer>
+      <p>Des appréciations, des remarques, des questions ? N'hésitez pas à <a href="mailto:contact@skitoo.net">me contacter</a>.</p>
+        <p>Suivez moi sur <a href="https://twitter.com/skitoo/" title="Compte Twitter">Twitter</a> et sur <a href="https://github.com/skitoo/" title="Compte Github">Github</a>.</p>
+    </footer>
+</article>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <ul>
+          <li><a href="mailto:contact@skitoo.net" title="Mail de Contact"><i class="icon-envelope"></i> Contact</a></li>
+            <li><a href="/feeds/all.atom.xml" title="Flux RSS"><i class="icon-rss"></i> RSS</a></li>
+            <li><a href="https://github.com/skitoo/" title="Compte Github"><i class="icon-github"></i> Github</a></li>
+            <li><a href="https://twitter.com/skitoo/" title="Compte Twitter"><i class="icon-twitter"></i> Twitter</a></li>
+            <li><a href="./journal.html"><i class="icon-book"></i> Journal</a></li>
+            <li><a href="./projets.html"><i class="icon-flaskfull"></i> Projets</a></li>
+            <li><a href="./colophon.html"><i class="icon-leaf"></i> Colophon</a></li>
+        </ul>
+        <p id="copyright" class="copyright">© 2018 Alexis Couronne</p>
+    </footer>
+    </div>
+  </body>
+</html>

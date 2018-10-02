@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arduino !</title>
+    <meta name="description" content="">
+    <link rel="canonical" href="./arduino.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexis Couronne">
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Skitoo ATOM Feed" />
+    <link href="./theme/css/style.css" rel="stylesheet">
+    <link href="./theme/css/whhg.css" rel="stylesheet">
+    <link href="./theme/css/monokai.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="./theme/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./theme/img/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./theme/img/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./theme/img/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="./theme/img/apple-touch-icon-57.png">
+  </head>
+
+  <body>
+    <div class="container">
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="." title="Skitoo.net"><img src="./theme/img/logo-skitoo.png" alt="Alexis Couronne" width="140" height="44"></a>
+            </div>
+            <ul class="menu">
+              <li><a href="./journal.html">journal</a></li>
+              <li><a href="./projets.html">projets</a></li>
+              <li><a href="./colophon.html">colophon</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="content" class="content">
+        <div id="sidebar" class="sidebar">
+        <div class="icon icon-diode"></div>
+        </div>
+        <div id="main" class="main">
+<article>
+    <header>
+        <h1>Arduino !</h1>
+        <span class="publication-date">
+            <time datetime="2010-10">Octobre 2010</time>, Alexis Couronne - 
+            [
+                <a href="tag/arduino.html">Arduino</a>            ]
+        </span>
+    </header>
+    <div id="ticket-content" class="ticket-content">
+        <p>Suite à <a href="http://www.skitoo.net/vaisseau-spatial-fait-maison.html">mon précédent billet</a>, j'ai commencé une réflexion concernant
+la mise en œuvre d'un projet similaire. Beaucoup de paramètres sont à
+prendre en compte notamment sur la partie technique. Dans la vidéo, le
+système embarqué est une caméra HD ainsi qu'un Iphone permettant de
+retrouver l'appareil après sa chute. Le coût d'un tel dispositif est non
+négligeable, surtout si l'on ne parvient pas à retrouver l'engin...
+Ayant fait une partie de mes études dans le domaine de l'électricité
+(cela remonte à pas mal de temps :D), une idée m'est venue à l'esprit : Pourquoi ne pas réaliser soi-même ce système embarqué ? Un peu fou ? Peut-être...
+J'ai donc lancé mes recherches en commençant par les <a href="http://fr.wikipedia.org/wiki/Microcontroleur">microcontroleurs</a>. Après
+avoir passé en revu quelques systèmes très connus dans le domaine (comme
+les <a href="http://fr.wikipedia.org/wiki/Microcontrôleur_PIC">PIC</a>), je me suis aperçu qu'ils pouvaient être assez complexe à
+utiliser et à programmer : langage Assembleur, environnement de
+développement sous Windows... Un autre point négatif : leurs coûts peuvent être élevés surtout si l'on
+ajoute celui du programmateur. En creusant un peu plus j'ai
+découvert un système plus adapté à mon niveau et à mon budget: le
+circuit imprimé <a href="http://arduino.cc/">Arduino</a>.</p>
+<p><img alt="Arduino" src="./images/arduino_uno_test.jpg" /></p>
+<p>Ce montage intègre un microcontroleur ainsi que son programmateur. Il se
+branche sur votre ordinateur via une interface USB. Le module est
+compatible avec tous les systèmes d'exploitations couramment utilisés :
+Windows, Mac Os X et Linux.</p>
+<p>Arduino est un système totalement Open Source, autant sur la partie
+software que hardware ! Le langage utilisé est tout simplement
+"Arduino", un dérivé du C. Il est d'ailleurs facilement extensible avec
+ce dernier.</p>
+<p>Un autre point positif est que cette petite bête est fournie avec un
+ensemble d'exemples permettant d'appréhender rapidement la programmation
+et le montage du module : chenillard de LED, contrôle d'un servomoteur,
+communication avec l'ordinateur... etc (pour voir quelques exemples et
+projet plus avancés, je vous conseille un petit tour sur Youtube avec le
+mot clé "arduino")</p>
+<p>Une fois votre programme chargé dans le cœur du microcontroleur, vous
+pouvez bien-sûr rendre le circuit imprimé totalement autonome en
+débranchant le câble USB de votre ordinateur. Une source d'énergie est
+bien entendu nécessaire.</p>
+<p>J'ai donc commandé le module ce week-end sur le site <a href="http://lextronic.fr/">Lextronic</a> afin
+de commencer quelques expérimentations ! Je publierai peut-être quelques
+tests :)</p>
+    </div>
+    <hr class="hr">
+    <div>
+        <ul class="pagination">
+                <li><a href="./vaisseau-spatial-fait-maison.html" rel="prev">&laquo; Précédent</a></li>
+                <li><a href="./premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html" rel="next">Suivant &raquo;</a></li>
+        </ul>
+    </div>
+    <footer>
+      <p>Des appréciations, des remarques, des questions ? N'hésitez pas à <a href="mailto:contact@skitoo.net">me contacter</a>.</p>
+        <p>Suivez moi sur <a href="https://twitter.com/skitoo/" title="Compte Twitter">Twitter</a> et sur <a href="https://github.com/skitoo/" title="Compte Github">Github</a>.</p>
+    </footer>
+</article>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <ul>
+          <li><a href="mailto:contact@skitoo.net" title="Mail de Contact"><i class="icon-envelope"></i> Contact</a></li>
+            <li><a href="/feeds/all.atom.xml" title="Flux RSS"><i class="icon-rss"></i> RSS</a></li>
+            <li><a href="https://github.com/skitoo/" title="Compte Github"><i class="icon-github"></i> Github</a></li>
+            <li><a href="https://twitter.com/skitoo/" title="Compte Twitter"><i class="icon-twitter"></i> Twitter</a></li>
+            <li><a href="./journal.html"><i class="icon-book"></i> Journal</a></li>
+            <li><a href="./projets.html"><i class="icon-flaskfull"></i> Projets</a></li>
+            <li><a href="./colophon.html"><i class="icon-leaf"></i> Colophon</a></li>
+        </ul>
+        <p id="copyright" class="copyright">© 2018 Alexis Couronne</p>
+    </footer>
+    </div>
+  </body>
+</html>
