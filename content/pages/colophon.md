@@ -22,4 +22,4 @@ Si vous appréciez mes clichés faites-le moi savoir sur [500px](http://500px.co
 
 ##Contact
 
-Vous avez des questions ou vous souhaitez tout simplement me contacter ? N'hésitez pas à le faire via [Email](mailto:alexis.couronne@gmail.com), [Twitter](https://twitter.com/skitoo/ "Twitter") ou encore [Github](https://github.com/skitoo "Github").
+Vous avez des questions ou vous souhaitez tout simplement me contacter ? N'hésitez pas à le faire via [Email](mailto:contact@skitoo.net), [Twitter](https://twitter.com/skitoo/ "Twitter") ou encore [Github](https://github.com/skitoo "Github").

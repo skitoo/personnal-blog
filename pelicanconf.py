@@ -8,8 +8,8 @@ DELETE_OUTPUT_DIRECTORY = True
 
 AUTHOR = u'Alexis Couronne'
 SITENAME = u'Skitoo'
-SITEURL = 'http://skitoo.net'
-EMAIL = 'alexis.couronne@gmail.com'
+SITEURL = 'https://www.skitoo.net'
+EMAIL = 'contact@skitoo.net'
 
 THEME = 'theme'
 
