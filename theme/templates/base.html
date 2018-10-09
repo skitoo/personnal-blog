@@ -27,7 +27,7 @@
   <body>
     <div class="container">
     <header id="header" class="header">
-        <div class="header-content">
+        <nav class="header-content">
             {% block header %}
             <div class="logo">
                 <a href="{{ SITEURL }}" title="Skitoo.net"><img src="{{ SITEURL }}/theme/img/logo-skitoo.png" alt="Alexis Couronne" width="140" height="44"></a>
@@ -38,7 +38,7 @@
               <li><a href="{{ SITEURL }}/colophon.html">colophon</a></li>
             </ul>
             {% endblock %}
-        </div>
+        </nav>
     </header>
 
     <div id="content" class="content">
@@ -48,9 +48,9 @@
         <div class="icon icon-{% block icon %}threed{% endblock %}"></div>
         {% endblock %}
         </div>
-        <div id="main" class="main">
+        <main id="main" class="main">
         {% block main %}{% endblock %}
-        </div>
+        </main>
         {% endblock %}
     </div>
 
