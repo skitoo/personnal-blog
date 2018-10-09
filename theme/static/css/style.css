@@ -5348,6 +5348,8 @@ article .pagination a:hover {
   .copyright {
     float: none;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5445,7 +5447,7 @@ article .pagination a:hover {
     font-size: 1.5625rem;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
   .menu {
     font-size: 16px;
     font-size: 1rem;
@@ -5454,20 +5456,14 @@ article .pagination a:hover {
     padding: 10px 0;
   }
   .content {
-    padding-bottom: 247px;
-  }
-  .footer {
-    height: 217px;
+    padding-bottom: 290px;
   }
   .copyright {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 360px) {
-  .content {
-    padding-bottom: 290px;
-  }
+@media screen and (max-width: 423px) {
   .footer {
-    height: 260px;
+    height: 240px;
   }
 }

@@ -135,7 +135,7 @@ article{
     h2, h3, h4, h5, h6{
         margin-bottom: 5px;
     }
-    
+
     header{
         margin-bottom: 30px;
 
@@ -269,7 +269,7 @@ article{
 
 .main{
     .column(10, @total-columns:@total-columns, true);
-    
+
 }
 
 .footer{
@@ -378,7 +378,7 @@ article{
         border:none;
         .font-size-rems(100);
         margin-top: 130px;
-    }  
+    }
 }
 
 .text-center{
@@ -420,9 +420,9 @@ article{
 
 
 
-// ------------------------------------------------------------------------------ // 
+// ------------------------------------------------------------------------------ //
 // Others resolutions
-// ------------------------------------------------------------------------------ // 
+// ------------------------------------------------------------------------------ //
 
 @media screen and (max-width: 1024px){
     .icon{
@@ -440,11 +440,13 @@ article{
             float: none;
             padding-left:0;
             text-align: center;
-        }       
+        }
     }
     .copyright{
         float:none;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -540,7 +542,7 @@ article{
     }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 375px){
     .menu{
         .font-size-rems(16);
         a{
@@ -548,21 +550,15 @@ article{
         }
     }
     .content{
-        padding-bottom: 247px;
-    }
-    .footer{
-        height: 217px;
+        padding-bottom: 290px;
     }
     .copyright{
         margin-top: 0;
     }
 }
 
-@media screen and (max-width: 360px){
-    .content{
-        padding-bottom: 290px;
-    }
-    .footer{
-        height: 260px;
-    }
+@media screen and (max-width: 423px){
+  .footer{
+    height: 240px;
+  }
 }
