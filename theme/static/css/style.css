@@ -5305,25 +5305,20 @@ article .pagination a:hover {
 .tags ul {
   list-style: none;
   max-width: 80%;
+  padding-left: 0;
 }
 .tags li {
   display: inline-block;
   float: none;
-  border: 1px solid #ffa500;
   background-color: #4d4d4d;
-  padding: 1px;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding: 1px 5px;
   margin-left: 3px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 .tags li a {
   font-style: bold;
   color: #9c9c9c;
 }
-.tags li a small {
+.tags li a .hash {
   color: #ffa500;
 }
 .tags li a:hover {

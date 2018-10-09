@@ -392,23 +392,20 @@ article{
     ul{
         list-style : none;
         max-width: 80%;
+        padding-left: 0;
     }
     li{
         display: inline-block;
         float: none;
-        border: 1px solid @dark-orange;
         background-color: @dark-grey;
-        padding: 1px;
-        padding-left: 3px;
-        padding-right: 3px;
+        padding: 1px 5px;
         margin-left: 3px;
-        .border-radius();
 
         a {
             font-style: bold;
             color: @soft-grey;
 
-            small {
+            .hash {
                 color: @dark-orange;
             }
         }
