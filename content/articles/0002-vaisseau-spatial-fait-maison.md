@@ -1,7 +1,7 @@
 Title: Vaisseau spatial fait maison
 Date: 2010-10-03 14:19
 Icon: rocket-launch
-Tags: DIY
+Tags: Electronique
 
 En trainant sur le forum du site d'astronomie amateur [Astrosurf](http://www.astrosurf.com),
 j'ai découvert une petite merveille. Un père et son fils ont fabriqué un

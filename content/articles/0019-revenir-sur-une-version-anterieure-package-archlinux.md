@@ -1,7 +1,7 @@
 Title: Revenir sur une version antérieure d'un package Archlinux
 Date: 2016-06-09
 Icon: terminal
-Tags: Archlinux
+Tags: Système
 
 
 
@@ -23,7 +23,7 @@ Une fois installé il suffit de taper la commande suivante pour pouvoir choisir 
 $ agetpkg -i docker-compose 1.5.2
 0 docker-compose-1.5.2-1-x86_64.pkg.tar.xz
 1 docker-compose-1.5.2-2-x86_64.pkg.tar.xz
-Select packages (* for all): 
+Select packages (* for all):
 ```
 
 Dans mon cas il me propose plusieurs "sous-versions" du paquet.

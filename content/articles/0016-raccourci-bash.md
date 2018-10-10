@@ -1,14 +1,14 @@
 Title: Raccourcis clavier sous Bash
 Date: 2014-06-19 23:00
 Icon: terminal
-Tags: Bash, Linux, Console
+Tags: Système
 
 
-Aujourd'hui je vais vous dresser une liste la plus complète possible des **raccourcis clavier** disponibles sous **Bash**. 
+Aujourd'hui je vais vous dresser une liste la plus complète possible des **raccourcis clavier** disponibles sous **Bash**.
 Une fois maîtrisé, ils deviennent vite indispensable pour gagner du temps lors de vos sessions sur **console Linux**.
 
-* **Ctrl + a** : Déplace votre curseur en début de ligne 
-* **Ctrl + e** : Déplace votre curseur en fin de ligne 
+* **Ctrl + a** : Déplace votre curseur en début de ligne
+* **Ctrl + e** : Déplace votre curseur en fin de ligne
 * **Ctrl + l** : Efface tout l'écran
 * **Ctrl + u** : Efface tous les caractères à gauche du curseur
 * **Ctrl + k** : Efface tous les caractères à droite du curseur

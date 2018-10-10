@@ -1,9 +1,9 @@
 Title: Raspberry Pi, l'ordinateur à bas coût
 Date: 2012-09-11 10:20
 Icon: raspberrypi
-Tags: RaspberryPI
+Tags: Electronique
 
-Aujourd'hui j'ai reçu mon nouveau jouet : un [Raspberry Pi](http://http://www.raspberrypi.org/). 
+Aujourd'hui j'ai reçu mon nouveau jouet : un [Raspberry Pi](http://http://www.raspberrypi.org/).
 
 Pour ceux qui ne connaissent pas encore, Raspberry Pi est un ordinateur à bas coût (environ 30 €), [open hardware](http://fr.wikipedia.org/wiki/Mat%C3%A9riel_libre) et de la taille d'une carte de crédit !
 

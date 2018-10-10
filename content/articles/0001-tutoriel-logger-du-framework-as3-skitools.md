@@ -1,7 +1,7 @@
 Title: Tutoriel - Logger du framework AS3 Skitools
 Date: 2010-08-15 10:28
 Icon: flashplayer
-Tags: Flash/AS3, Tutoriel
+Tags: Code
 
 Voilà bientôt un an et demi que je développe en AS3 dans un cadre
 professionnel. Au cour de mon apprentissage sur la technologie Flash,
@@ -133,14 +133,14 @@ Tableau récapitulatif des balises :
 Dans Skitools chaque Logger hérite du Level de son parent à moins bien
 sur qu'on lui est explicitement spécifié un Level. Seul le logger
 "root", défini par le système, ne possède pas de parent. Ce qui induit
-que par défaut tous les logger héritent du Level du "root". Prenons l'exemple suivant : 
+que par défaut tous les logger héritent du Level du "root". Prenons l'exemple suivant :
 
-![Héritage logger](|filename|/images/heritage-logger.jpg) 
+![Héritage logger](|filename|/images/heritage-logger.jpg)
 
 Dans cet exemple nous spécifions que **root** à le niveau **WARN**. Ses héritiers (**org** et **org.skitools**) héritent tous de ce même level.
 En spécifiant que **org.skitools.mvc **à un niveau d'**INFO** on casse la chaîne d'héritage, donc lui et ses héritiers (**org.skitools.mvc.view**) auront le niveau **INFO**.
 **com.scopart.utils** devrait par défaut avoir le niveau **WARN** (héritage de **root**), mais comme pour **org.skitools.mvc **on casse la chaîne d'héritage en spécifiant **FATAL** comme niveau.
-Si **com.scopart.utils** a un jour des enfants, ils hériteront donc de ce même niveau. 
+Si **com.scopart.utils** a un jour des enfants, ils hériteront donc de ce même niveau.
 
 Voyons maintenant ce qui se passe si par exemple le logger **org.skitools** émet un message :
 
@@ -184,7 +184,7 @@ Skitools :
 
                 // ce message ne sera journalisé car inférieur
                 // à ERROR spécifié dans le Logger
-                logger.debug("message 1"); 
+                logger.debug("message 1");
 
                 // les deux messages suivant seront journalisé
                 // car supérieur ou égal à ERROR

@@ -1,7 +1,7 @@
 Title: Gestion des groupes sous Linux
 Date: 2014-06-05 01:00
 Icon: groups-friends
-Tags: Linux
+Tags: Système
 
 La gestion des groupes sous **Linux** est quelque chose que je pratique rarement. Je profite donc de cet article pour rappeler comment cela se gère.
 
@@ -14,7 +14,7 @@ Pour cela rien de très compliqué :
 
 ##Suppression d'un groupe utilisateur
 
-Très simple également : 
+Très simple également :
 
     ::bash
     groupdel <nomdugroupe>

@@ -1,7 +1,7 @@
 Title: Logger toutes les exceptions en Python
 Date: 2014-05-27 19:00
 Icon: python
-Tags: Python, Logging
+Tags: Code
 
 
 Si comme moi vous travaillez sur des projets ayant une taille conséquante il peut être intéressant de logger l'ensemble des exceptions à l'aide du logger Python. Seulement mettre des try/except dans le moindre recoin de votre code peut rapidement être fastidieux et rend votre code vite illisible.

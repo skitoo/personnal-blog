@@ -1,7 +1,7 @@
 Title: Arduino !
 Date: 2010-10-12 06:46
 Icon: diode
-Tags: Arduino
+Tags: Electronique
 
 Suite à [mon précédent billet](http://www.skitoo.net/vaisseau-spatial-fait-maison.html), j'ai commencé une réflexion concernant
 la mise en œuvre d'un projet similaire. Beaucoup de paramètres sont à

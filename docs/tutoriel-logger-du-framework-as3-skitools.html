@@ -48,7 +48,7 @@
         <span class="publication-date">
             <time datetime="2010-08">Août 2010</time>, Alexis Couronne - 
             [
-                <a href="tag/flashas3.html">Flash/AS3</a> ::                 <a href="tag/tutoriel.html">Tutoriel</a>            ]
+                <a href="tag/code.html">Code</a>            ]
         </span>
     </header>
     <div id="ticket-content" class="ticket-content">
@@ -187,12 +187,12 @@ WARN [root] Message B
 <p>Dans Skitools chaque Logger hérite du Level de son parent à moins bien
 sur qu'on lui est explicitement spécifié un Level. Seul le logger
 "root", défini par le système, ne possède pas de parent. Ce qui induit
-que par défaut tous les logger héritent du Level du "root". Prenons l'exemple suivant : </p>
-<p><img alt="Héritage logger" src="./images/heritage-logger.jpg" /> </p>
+que par défaut tous les logger héritent du Level du "root". Prenons l'exemple suivant :</p>
+<p><img alt="Héritage logger" src="./images/heritage-logger.jpg" /></p>
 <p>Dans cet exemple nous spécifions que <strong>root</strong> à le niveau <strong>WARN</strong>. Ses héritiers (<strong>org</strong> et <strong>org.skitools</strong>) héritent tous de ce même level.
 En spécifiant que <strong>org.skitools.mvc </strong>à un niveau d'<strong>INFO</strong> on casse la chaîne d'héritage, donc lui et ses héritiers (<strong>org.skitools.mvc.view</strong>) auront le niveau <strong>INFO</strong>.
 <strong>com.scopart.utils</strong> devrait par défaut avoir le niveau <strong>WARN</strong> (héritage de <strong>root</strong>), mais comme pour <strong>org.skitools.mvc </strong>on casse la chaîne d'héritage en spécifiant <strong>FATAL</strong> comme niveau.
-Si <strong>com.scopart.utils</strong> a un jour des enfants, ils hériteront donc de ce même niveau. </p>
+Si <strong>com.scopart.utils</strong> a un jour des enfants, ils hériteront donc de ce même niveau.</p>
 <p>Voyons maintenant ce qui se passe si par exemple le logger <strong>org.skitools</strong> émet un message :</p>
 <ul>
 <li>Les messages <strong>DEBUG</strong> et <strong>INFO</strong> ne seront pas journalisés car ils possèdent un niveau inférieur à celui spécifié dans <strong>org.skitools</strong> (<strong>WARN</strong>).</li>
