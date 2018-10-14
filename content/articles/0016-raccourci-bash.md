@@ -24,6 +24,6 @@ Une fois maîtrisé, ils deviennent vite indispensable pour gagner du temps lors
 * **Ctrl + r** : Permet de rechercher dans l'historique des commandes précédemment saisies
 
 
-Certains raccourcis on pu être oublié. Faites en part dans les commentaires :)
+Certains raccourcis ont pu être oublié. Faites en part dans les commentaires :)
 
 
