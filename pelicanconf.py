@@ -33,6 +33,7 @@ RELATIVE_URLS = True
 
 TEMPLATE_PAGES = {
     'journal.html': 'journal.html',
+    'conferences.html': 'conferences.html',
     '404.html': '404.html',
     'sitemap.html': 'sitemap.xml',
     '.htaccess': '.htaccess',

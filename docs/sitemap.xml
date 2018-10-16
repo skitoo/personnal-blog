@@ -103,11 +103,11 @@
       <priority>0.5</priority>
    </url>
     <url>
-      <loc>./photos.html</loc>
-      <priority>0.5</priority>
+      <loc>./conferences.html</loc>
+      <priority>1</priority>
    </url>
    <url>
       <loc>./journal.html</loc>
       <priority>1</priority>
    </url>
-</urlset> 
+</urlset>
