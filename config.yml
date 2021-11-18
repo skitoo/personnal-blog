@@ -1,0 +1,63 @@
+baseURL: "https://www.skitoo.net"
+languageCode: "fr-fr"
+defaultContentLanguage: "fr"
+theme: "PaperMod"
+publishdir: "docs"
+disableKinds:
+  - taxonomy
+  - term
+  - category
+  - tag
+
+params:
+  AuthorName: "Alexis Couronne"
+  GitHubUser: "skitoo"
+  profileMode:
+    enabled: true
+    Title: Alexis Couronne, programmeur, photographe et rôliste.
+    imageUrl: "/skitoo.png"
+  socialIcons:
+    - name: github
+      url: "https://github.com/skitoo"
+    - name: twitter
+      url: "https://twitter.com/skitoo"
+    - name: RsS
+      url: "index.xml"
+  assets:
+    favicon: "/skitoo-icon.png"
+    favicon16x16: "/skitoo-icon.png"
+    apple_touch_icon: "/skitoo-icon.png"
+
+permalinks:
+  lisboa: "/photos/lisboa.html"
+
+languages:
+  fr:
+    languageName: "French"
+    title: "Skitoo"
+    params:
+      logo:
+        logoText: "Skitoo"
+        logoHomeLink: "/"
+    menu:
+      main:
+        - identifier: "journal"
+          name: "Journal"
+          url: "/journal.html"
+          weight: 10
+        - identifier: "projets"
+          name: "Projets"
+          url: "/projets.html"
+          weight: 70
+        - identifier: "photos"
+          name: "Photos"
+          url: "/photos.html"
+          weight: 80
+        - identifier: "conferences"
+          name: "Conférences"
+          url: "/conferences.html"
+          weight: 90
+        - identifier: "a-propos"
+          name: "A propos"
+          url: "/a-propos.html"
+          weight: 100
