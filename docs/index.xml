@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Skitoo</title>
+    <link>https://www.skitoo.net/</link>
+    <description>Recent content on Skitoo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.skitoo.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Modifier la valeur fs.inotify.max_user_watches sous Archlinux</title>
+      <link>https://www.skitoo.net/modifier-la-valeur-fsinotifymax_user_watches-sous-archlinux.html</link>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/modifier-la-valeur-fsinotifymax_user_watches-sous-archlinux.html</guid>
+      <description>Si vous travaillez avec des outils comme Webpack, vous utilisez certainement l&amp;rsquo;option watch qui permet de lancer automatiquement la compilation de votre code dès que vous modifiez un des fichiers de votre projet.
+Pour fonctionner, Webpack (et tous les outils de ce style) utilise le système d&amp;rsquo;événement de votre système d&amp;rsquo;exploitation. A savoir sous linux : inotify.
+Sauf que sur des projets contenant un nombre important de fichiers, il peut arriver que la base de données de inotify ne veuille plus se mettre à jour.</description>
+    </item>
+    
+    <item>
+      <title>Comment résoudre l&#39;erreur &#34;wxe_driver.so&#34; sous Elixir</title>
+      <link>https://www.skitoo.net/comment-resoudre-lerreur-wxe_driverso-sous-elixir.html</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/comment-resoudre-lerreur-wxe_driverso-sous-elixir.html</guid>
+      <description>Dans le langage Elixir il est fourni un super outil pour debugger et visualiser l&amp;rsquo;ensemble des processus dans votre programme.
+Pour cela, il suffit de lancer la commande suivante dans votre console iex :
+:observer.start # ou :debugger.start Sauf que voilà, sous Archlinux, les dépendances, pour cette fonctionnalité, ne sont pas installé par défaut avec Elixir et vous risquez de rencontrer l&amp;rsquo;erreur suivante :
+[error] ERROR: Could not find &#39;wxe_driver.so&#39; in: /usr/lib/erlang/lib/wx-1.</description>
+    </item>
+    
+    <item>
+      <title>error: key could not be looked up remotely</title>
+      <link>https://www.skitoo.net/error-key-could-not-be-looked-up-remotely.html</link>
+      <pubDate>Tue, 24 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/error-key-could-not-be-looked-up-remotely.html</guid>
+      <description>Voilà 2 ans que j&amp;rsquo;utilise quotidiennement la distribution Linux Archlinux. Mais ce matin, un petit souci vient enrayer mon enthousiasme&amp;hellip; Lors d&amp;rsquo;une tentative de mise à jour des paquets via pacman, une erreur s&amp;rsquo;est produite :
+$ sudo pacman -Syu :: Synchronizing package databases... core is up to date extra is up to date community is up to date multilib is up to date .... .... .... downloading required keys... error: key &amp;#34;EEEEE2EEEE2EEEEE&amp;#34; could not be looked up remotely error: required key missing from keyring error: failed to commit transaction (unexpected error) Errors occurred, no packages were upgraded.</description>
+    </item>
+    
+    <item>
+      <title>Vim expliqué à ma grand-mère</title>
+      <link>https://www.skitoo.net/vim-explique-a-ma-grand-mere.html</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/vim-explique-a-ma-grand-mere.html</guid>
+      <description>Il y a quelques mois, j&amp;rsquo;ai pu proposer à l&amp;rsquo;association ARU2L une conférence sur le bien connu, mais peu maîtrisé, éditeur de texte Vim.
+Cette conférence a été filmée. Je vous en fais donc profiter ici.
+Bon visionnage !
+  </description>
+    </item>
+    
+    <item>
+      <title>Revenir sur une version antérieure d&#39;un package Archlinux</title>
+      <link>https://www.skitoo.net/revenir-sur-une-version-anterieure-dun-package-archlinux.html</link>
+      <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/revenir-sur-une-version-anterieure-dun-package-archlinux.html</guid>
+      <description>J&amp;rsquo;ai récemment dû faire un &amp;ldquo;downgrade&amp;rdquo; d&amp;rsquo;un paquet Archlinux car la version actuelle me posait quelques soucis. Après une recherche sur les internets infructueuse, mon pote Benoît m&amp;rsquo;a parlé d&amp;rsquo;un outil qui permet de réaliser rapidement et simplement cette action : agetpkg.
+Pour commencer, vous devez installer cet outil :
+$ yaourt agetpkg Vous remarquerez qu&amp;rsquo;à ce jour, yaourt va piocher directement sur le github du projet.
+Une fois installé il suffit de taper la commande suivante pour pouvoir choisir la version du paquet souhaitée (dans mon cas : docker-compose version 1.</description>
+    </item>
+    
+    <item>
+      <title>Modifier l&#39;extension d&#39;une url avec NginX</title>
+      <link>https://www.skitoo.net/modifier-lextension-dune-url-avec-nginx.html</link>
+      <pubDate>Sun, 10 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/modifier-lextension-dune-url-avec-nginx.html</guid>
+      <description>Dans le cas présent, je souhaiterais rediriger tous les appels aux url finissant par *.html vers la même url mais sans extension.
+Exemple : www.skitoo.net/unepage.html vers www.skitoo.net/unepage/
+Pour celà voici la petite astuce qui permet de réaliser cette redirection :
+location ~ \.html$ { rewrite ^/(.*)\.html$ /$1 last; } Source</description>
+    </item>
+    
+    <item>
+      <title>Convertir un objet datetime Python en timestamp</title>
+      <link>https://www.skitoo.net/convertir-un-objet-datetime-python-en-timestamp.html</link>
+      <pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/convertir-un-objet-datetime-python-en-timestamp.html</guid>
+      <description>Voila un truc que j&amp;rsquo;arrive jamais à me souvenir : comment convertir un objet datetime Python en timestamp.
+Voici le petit bout de code qui permet de faire ça :
+import datetime import time now = datetime.datetime.now() # on récupère la date actuelle timestamp = time.mktime(now.timetuple()) # on effectue la convertion Voila ! Vous l&amp;rsquo;aurez compris c&amp;rsquo;est très simple mais il faut s&amp;rsquo;en souvenir :)
+Pour la peine je vous donne la convertion dans l&amp;rsquo;autre sens : de timestamp vers datetime.</description>
+    </item>
+    
+    <item>
+      <title>Raccourcis clavier sous Bash</title>
+      <link>https://www.skitoo.net/raccourcis-clavier-sous-bash.html</link>
+      <pubDate>Thu, 19 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/raccourcis-clavier-sous-bash.html</guid>
+      <description>Aujourd&amp;rsquo;hui je vais vous dresser une liste la plus complète possible des raccourcis clavier disponibles sous Bash. Une fois maîtrisé, ils deviennent vite indispensable pour gagner du temps lors de vos sessions sur console Linux.
+ Ctrl + a : Déplace votre curseur en début de ligne Ctrl + e : Déplace votre curseur en fin de ligne Ctrl + l : Efface tout l&amp;rsquo;écran Ctrl + u : Efface tous les caractères à gauche du curseur Ctrl + k : Efface tous les caractères à droite du curseur Ctrl + t : Permet d&amp;rsquo;inverser la lettre courante avec la précédente Ctrl + y : Colle la précédente saisie Ctrl + d : Efface le caractère courant ou sinon déconnecte (équivalent de logout) si la ligne est vide Ctrl + w : Efface le mot précédent Alt + d : Efface le mot suivant Alt + t : Inverse le mot courant et le mot précédent Alt + c : Met la première lettre du mot courant en majuscule et le reste du mot en minuscule Alt + b et Alt + f : Déplace le curseur de mot en mot (A gauche et à droite) Echap puis un chiffre puis un caractère : Répète le caractère autant de fois que le chiffre.</description>
+    </item>
+    
+    <item>
+      <title>Gestion des groupes sous Linux</title>
+      <link>https://www.skitoo.net/gestion-des-groupes-sous-linux.html</link>
+      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/gestion-des-groupes-sous-linux.html</guid>
+      <description>La gestion des groupes sous Linux est quelque chose que je pratique rarement. Je profite donc de cet article pour rappeler comment cela se gère.
+Création d&amp;rsquo;un groupe utilisateur Pour cela rien de très compliqué :
+groupadd &amp;lt;nomdugroupe&amp;gt; Suppression d&amp;rsquo;un groupe utilisateur Très simple également :
+groupdel &amp;lt;nomdugroupe&amp;gt; Ajout d&amp;rsquo;un utilisateur dans un groupe Une fois que votre groupe est créé, on peut ajouter des utilisateurs à celui-ci. Plusieurs façon d&amp;rsquo;opérer :</description>
+    </item>
+    
+    <item>
+      <title>Logger toutes les exceptions en Python</title>
+      <link>https://www.skitoo.net/logger-toutes-les-exceptions-en-python.html</link>
+      <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/logger-toutes-les-exceptions-en-python.html</guid>
+      <description>Si comme moi vous travaillez sur des projets ayant une taille conséquante il peut être intéressant de logger l&amp;rsquo;ensemble des exceptions à l&amp;rsquo;aide du logger Python. Seulement mettre des try/except dans le moindre recoin de votre code peut rapidement être fastidieux et rend votre code vite illisible.
+En python, comme dans d&amp;rsquo;autre langage de programmation, il existe un moyen simple de faire cela une fois pour toutes : dans notre cas, la fonction sys.</description>
+    </item>
+    
+    <item>
+      <title>Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii</title>
+      <link>https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html</link>
+      <pubDate>Wed, 12 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html</guid>
+      <description>Il a quelques temps (2 ans en fait), j&amp;rsquo;ai réalisé un petit montage basé sur un kit Arduino qui permettait de contrôler un servomoteur à partir d&amp;rsquo;un nunchuck. Suite à de nombreuses demandes, j&amp;rsquo;ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.
+Ce dont vous avez besoin  1 servomoteur 1 nunchuk de console Wii 1 kit Arduino (pour ma part j&amp;rsquo;utilise le Arduino UNO R3) 1 breadboard (ou platine de prototypage) quelques straps (ou fils de liaison)  Les principes du montage Le nunchuck Wii utilise le protocole de communication I2C.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi, l&#39;ordinateur à bas coût</title>
+      <link>https://www.skitoo.net/raspberry-pi-lordinateur-a-bas-cout.html</link>
+      <pubDate>Tue, 11 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/raspberry-pi-lordinateur-a-bas-cout.html</guid>
+      <description>Aujourd&amp;rsquo;hui j&amp;rsquo;ai reçu mon nouveau jouet : un Raspberry Pi.
+Pour ceux qui ne connaissent pas encore, Raspberry Pi est un ordinateur à bas coût (environ 30 €), open hardware et de la taille d&amp;rsquo;une carte de crédit !
+Bien entendu les performances ne sont pas celles d&amp;rsquo;un PC de &amp;ldquo;pro gamer&amp;rdquo;, mais assez pour pouvoir faire pas mal de trucs assez sympa.
+Composition de la carte Il existe deux versions du Raspberry Pi, je possède la &amp;ldquo;B&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Pyxel Edit, l&#39;outil de création de pixel art et de tileset</title>
+      <link>https://www.skitoo.net/pyxel-edit-loutil-de-creation-de-pixel-art-et-de-tileset.html</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/pyxel-edit-loutil-de-creation-de-pixel-art-et-de-tileset.html</guid>
+      <description>Voici la petite découverte de la journée : Pyxel Edit un outil de création de pixel art. Facile à prendre en main, il ravira tous les adeptes du dessin pixel par pixel.
+Cette application, développée à l&amp;rsquo;aide de la technologie Adobe Air, fonctionne sous Windows, Mac et Linux. Encore en beta publique elle est distribuée gratuitement !
+Pyxel Edit fonctionne avec un système de &amp;ldquo;tiles&amp;rdquo; (ou tuiles). Vous pouvez éditer en un seul clic plusieurs &amp;ldquo;instances&amp;rdquo; de la même tile et ainsi constater si l&amp;rsquo;ensemble de vos tiles fonctionne l&amp;rsquo;une avec l&amp;rsquo;autre.</description>
+    </item>
+    
+    <item>
+      <title>Projet Monocle, le nouveau profiler Flash de chez Adobe</title>
+      <link>https://www.skitoo.net/projet-monocle-le-nouveau-profiler-flash-de-chez-adobe.html</link>
+      <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/projet-monocle-le-nouveau-profiler-flash-de-chez-adobe.html</guid>
+      <description>Il y a environ un mois se tenait la Adobe Game Summit 2012 dans les locaux d&amp;rsquo;Adobe. Elle réunissait nombreux acteurs du jeu vidéo comme Frima, Gamua, Kixeye, Photonstorm, Rumble, Rovio, Ubisoft, Yamago et Zynga. Lors des conférences qui ont eu lieu a été présenté Monocle, un projet de profiling (ou profilage de code).
+Le but de ce projet est simple : vous permettre de détecter les goulots d&amp;rsquo;étranglements, en terme de performance, de votre jeu vidéo.</description>
+    </item>
+    
+    <item>
+      <title>Comment contrôler un jeu de plateforme sur mobile ou tablette ?</title>
+      <link>https://www.skitoo.net/comment-controler-un-jeu-de-plateforme-sur-mobile-ou-tablette.html</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/comment-controler-un-jeu-de-plateforme-sur-mobile-ou-tablette.html</guid>
+      <description>Lorsque l&amp;rsquo;on est confronté au développement d&amp;rsquo;un jeu sur mobile ou tablette, il y a des contraintes que l&amp;rsquo;on ne retrouve que sur ce genre de support. En effet, le contrôle d&amp;rsquo;un personnage de jeu de plateforme tel que Mario n&amp;rsquo;est pas très aisé et souvent soumis à de vives critiques. L&amp;rsquo;absence de gamepad à contraint les développeurs à trouver des ruses pour rendre cela possible.
+Après une petite recherche j&amp;rsquo;ai pu trouver ici ou là quelques solutions pour résoudre ce problème.</description>
+    </item>
+    
+    <item>
+      <title>Les pas perdus</title>
+      <link>https://www.skitoo.net/les-pas-perdus.html</link>
+      <pubDate>Tue, 28 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/les-pas-perdus.html</guid>
+      <description>Pièce de théâtre Les pas perdus écrite par Denise Bonal joué par des comédiens débutants du théâtre Jour et Nuit à Clermont-Ferrand.</description>
+    </item>
+    
+    <item>
+      <title>Documentaire Arduino</title>
+      <link>https://www.skitoo.net/documentaire-arduino.html</link>
+      <pubDate>Thu, 15 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/documentaire-arduino.html</guid>
+      <description>Voici une petite vidéo qui m&amp;rsquo;avait échappée. Sortie en 2010, celle-ci est un documentaire sur le projet Arduino.</description>
+    </item>
+    
+    <item>
+      <title>500px !</title>
+      <link>https://www.skitoo.net/500px.html</link>
+      <pubDate>Mon, 15 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/500px.html</guid>
+      <description>500px est le tout nouveau site pour photographe à la mode ! Celui-ci regroupe de nombreuses fonctionnalités. Il est une sorte de mix entre Flickr et Facebook : partage et stockage de photos, système de notation des photos d&amp;rsquo;autres photographes par le système &amp;ldquo;Like&amp;rdquo; / &amp;ldquo;Dislike&amp;rdquo;&amp;hellip; Mais ce n&amp;rsquo;est pas tout, 500px vous permet également de gréer votre portfolio via un sous-domaine du site (exemple : http://skitoo.500px.com).
+En version gratuite seuls quelques thèmes vous sont proposés, une seule catégorie pour classer vos clichés et un nombre d&amp;rsquo;upload de photos limité à 30 par semaine.</description>
+    </item>
+    
+    <item>
+      <title>Premier montage Arduino : Contrôler un servo moteur avec un Nunchuck Wii</title>
+      <link>https://www.skitoo.net/premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html</link>
+      <pubDate>Sun, 17 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html</guid>
+      <description>Ça y est ! J&amp;rsquo;ai reçu mon dernier petit jouet : un kit Arduino. Pour mon premier test avec ce système, j&amp;rsquo;ai réalisé un petit montage permettant de contrôler un servomoteur avec un Nunchuck de la console Wii. Afin de vous donner un petit aperçu du montage j&amp;rsquo;ai réalisé une vidéo de démonstration de quelques secondes :
+  Si vous êtes intéressé par ce montage n&amp;rsquo;hésitez pas à le faire savoir dans les commentaires je me ferais un plaisir de mettre en ligne le schéma électrique et code source.</description>
+    </item>
+    
+    <item>
+      <title>Arduino !</title>
+      <link>https://www.skitoo.net/arduino.html</link>
+      <pubDate>Tue, 12 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/arduino.html</guid>
+      <description>Suite à mon précédent billet, j&amp;rsquo;ai commencé une réflexion concernant la mise en œuvre d&amp;rsquo;un projet similaire. Beaucoup de paramètres sont à prendre en compte notamment sur la partie technique. Dans la vidéo, le système embarqué est une caméra HD ainsi qu&amp;rsquo;un Iphone permettant de retrouver l&amp;rsquo;appareil après sa chute. Le coût d&amp;rsquo;un tel dispositif est non négligeable, surtout si l&amp;rsquo;on ne parvient pas à retrouver l&amp;rsquo;engin&amp;hellip; Ayant fait une partie de mes études dans le domaine de l&amp;rsquo;électricité (cela remonte à pas mal de temps :D), une idée m&amp;rsquo;est venue à l&amp;rsquo;esprit : Pourquoi ne pas réaliser soi-même ce système embarqué ?</description>
+    </item>
+    
+    <item>
+      <title>Vaisseau spatial fait maison</title>
+      <link>https://www.skitoo.net/vaisseau-spatial-fait-maison.html</link>
+      <pubDate>Sun, 03 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/vaisseau-spatial-fait-maison.html</guid>
+      <description>En trainant sur le forum du site d&amp;rsquo;astronomie amateur Astrosurf, j&amp;rsquo;ai découvert une petite merveille. Un père et son fils ont fabriqué un petit engin spatial. Celui-ci est conçu sur la base d&amp;rsquo;un ballon météorologique embarquant une petite caméra vidéo HD ainsi qu&amp;rsquo;un téléphone équipé d&amp;rsquo;un GPS afin de suivre les déplacements de l&amp;rsquo;engin. Voici donc la petite vidéo de l&amp;rsquo;exploit :
+  Je dois avouer que ce genre de projet m&amp;rsquo;intéresserait énormément !</description>
+    </item>
+    
+    <item>
+      <title>Tutoriel - Logger du framework AS3 Skitools</title>
+      <link>https://www.skitoo.net/tutoriel-logger-du-framework-as3-skitools.html</link>
+      <pubDate>Sun, 15 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/tutoriel-logger-du-framework-as3-skitools.html</guid>
+      <description>Voilà bientôt un an et demi que je développe en AS3 dans un cadre professionnel. Au cour de mon apprentissage sur la technologie Flash, j&amp;rsquo;ai développé un framework contenant plusieurs outils. Celui-ci répond au doux nom de Skitools et il est hébergé sur un dépôt Mercurial du fabuleux site Bitbucket. Afin d&amp;rsquo;en faire profiter le plus grand nombre de personnes, j&amp;rsquo;ai décidé de me lancer dans une série de tutoriels expliquant les différentes briques du framework.</description>
+    </item>
+    
+    <item>
+      <title>A propos</title>
+      <link>https://www.skitoo.net/a-propos.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/a-propos.html</guid>
+      <description>Je m’appelle Alexis Couronne et je vis à Rodez dans le sud de la France.
+Ingénieur en développement web, je suis passionné par la photographie depuis plus de 10 ans. J’ai pu m’essayer à plusieurs pratiques photographiques notamment le paysage, le portrait ou encore l’astrophotographie.
+Aujourd’hui, je me concentre plus précisément sur la photographie de rue, inspiré par les plus grands du domaine comme Robert Frank. J’essaie de poser ma petite pierre à l’édifice en documentant mon quotidien, mes voyages ou encore en saisissant quelques scènes de vie lors de mes déambulations.</description>
+    </item>
+    
+    <item>
+      <title>Conférences</title>
+      <link>https://www.skitoo.net/conferences.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/conferences.html</guid>
+      <description>Découverte de Ansible Novembre 2017
+  Découverte du langage Elm Novembre 2017
+  Vim expliqué à ma grand-mère Avril 2017
+  </description>
+    </item>
+    
+    
+    <item>
+      <title>Lisboa</title>
+      <link>https://www.skitoo.net/photos/lisboa.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/photos/lisboa.html</guid>
+      <description>Durant un court séjour professionnel en octobre 2019 au Portugal, j’ai pu déambuler au cœur de la ville de Lisbonne.
+Ce fut l’occasion de sortir mon appareil photo et tester mes compétences en photographie de rue.
+Malgré cette courte durée et le temps maussade, j’ai pu rapporter dans ma besace quelques images que j’ai réunies ici sur cette page.
+                                          </description>
+    </item>
+    
+    <item>
+      <title>Photos</title>
+      <link>https://www.skitoo.net/photos.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/photos.html</guid>
+      <description>Lisboa Octobre 2019
+  </description>
+    </item>
+    
+    <item>
+      <title>Projets</title>
+      <link>https://www.skitoo.net/projets.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/projets.html</guid>
+      <description>Kivy-Particle Kivy-Particle est un portage de l&amp;rsquo;extension Starling Particle System pour le framework Python Kivy.
+[skitoo/kivy-particle]
+Rozenn Rozenn est un système de journalisation Flash/AS3 grandement inspiré par la librairie Java Log4J. Rozenn offre un système hautement configurable en entrée et en sortie.
+[skitoo/rozenn]
+Django-Gravatar Django-Gravatar vous permet d&amp;rsquo;intégrer très facilement dans vos sites développés en Django une image avatar hébergée sur le service web Gravatar.
+[skitoo/django-gravatar]
+Django-Thumbs Django-Thumbs vous permet de générer très facilement des miniatures pour vos images hébergées sur vos sites Django.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Skitoo</title>
+    <link>https://www.skitoo.net/photos/</link>
+    <description>Recent content on Skitoo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language><atom:link href="https://www.skitoo.net/photos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lisboa</title>
+      <link>https://www.skitoo.net/photos/lisboa.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/photos/lisboa.html</guid>
+      <description>Durant un court séjour professionnel en octobre 2019 au Portugal, j’ai pu déambuler au cœur de la ville de Lisbonne.
+Ce fut l’occasion de sortir mon appareil photo et tester mes compétences en photographie de rue.
+Malgré cette courte durée et le temps maussade, j’ai pu rapporter dans ma besace quelques images que j’ai réunies ici sur cette page.
+                                          </description>
+    </item>
+    
+  </channel>
+</rss>
