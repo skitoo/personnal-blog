@@ -11,7 +11,7 @@ Ingénieur en développement web, je suis passionné par la photographie depuis 
 Aujourd’hui, je me concentre plus précisément sur la photographie de rue, inspiré par les plus grands du domaine comme Robert Frank. J’essaie de poser ma petite pierre à l’édifice en documentant mon quotidien, mes voyages ou encore en saisissant quelques scènes de vie lors de mes déambulations.
 
 
-L'année 2020 et son lot de contraintes sanitaires m'ont permises de renouer avec une vieille passion que je n'avais pas pratiqué depuis le lycée : le jeu de rôle "sur table".
+L'année 2020 et son lot de contraintes sanitaires m'ont permis de renouer avec une vieille passion que je n'avais pas pratiqué depuis le lycée : le jeu de rôle "sur table".
 J'ai pu découvrir de nouveaux jeux adaptés aux débutants comme [Chroniques Oubliées](https://www.black-book-editions.fr/catalogue.php?id=13).
 
 
@@ -29,7 +29,7 @@ Ce site a été conçu à l'aide du moteur de blog [Hugo](https://gohugo.io) app
 ## Collection de jeux de rôle
 
 - Warhammer (1e)
-- Chroniques oubliées fantazay
+- Chroniques oubliées fantazy
 - Chroniques oubliées contemporain
 - L'Appel de Cthulhu (7e)
 - Héros & Dragons
