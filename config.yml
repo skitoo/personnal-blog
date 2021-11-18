@@ -26,6 +26,7 @@ params:
   assets:
     favicon: "/skitoo-icon.png"
     favicon16x16: "/skitoo-icon.png"
+    favicon32x32: "/skitoo-icon.png"
     apple_touch_icon: "/skitoo-icon.png"
 
 permalinks:
