@@ -1,111 +1,463 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Alexis Couronne - Journal</title>
-    <meta name="description" content="Journal d'un développeur Python -  Flash/AS3">
-    <link rel="canonical" href="./journal.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alexis Couronne">
-    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Skitoo ATOM Feed" />
-    <link href="./theme/css/style.css" rel="stylesheet">
-    <link href="./theme/css/whhg.css" rel="stylesheet">
-    <link href="./theme/css/monokai.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
 
-    <link rel="shortcut icon" href="./theme/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./theme/img/apple-touch-icon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./theme/img/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./theme/img/apple-touch-icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="./theme/img/apple-touch-icon-57.png">
-  </head>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Journal | Skitoo</title>
+<meta name="keywords" content="" />
+<meta name="description" content="archives">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.skitoo.net/journal.html" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.skitoo.net/skitoo-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.skitoo.net/skitoo-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.skitoo.net/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.skitoo.net/skitoo-icon.png">
+<link rel="mask-icon" href="https://www.skitoo.net/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.89.4" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <body>
-    <div class="container">
-    <header id="header" class="header">
-        <nav class="header-content">
-            <div class="logo">
-                <a href="." title="Skitoo.net"><img src="./theme/img/logo-skitoo.png" alt="Alexis Couronne" width="140" height="44"></a>
-            </div>
-            <ul class="menu">
-              <li><a href="./journal.html">journal</a></li>
-              <li><a href="./conferences.html">conférences</a></li>
-              <li><a href="./projets.html">projets</a></li>
-              <li><a href="./colophon.html">colophon</a></li>
-            </ul>
-        </nav>
-    </header>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    <div id="content" class="content">
-        <div id="sidebar" class="sidebar">
-        <div class="icon icon-book"></div>
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Journal" />
+<meta property="og:description" content="archives" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.skitoo.net/journal.html" /><meta property="article:section" content="" />
+
+<meta property="og:site_name" content="Skitoo" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Journal"/>
+<meta name="twitter:description" content="archives"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Journal",
+      "item": "https://www.skitoo.net/journal.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Journal",
+  "name": "Journal",
+  "description": "archives",
+  "keywords": [
+    
+  ],
+  "articleBody": "",
+  "wordCount" : "0",
+  "inLanguage": "fr",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.skitoo.net/journal.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Skitoo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.skitoo.net/skitoo-icon.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.skitoo.net" accesskey="h" title="Skitoo (Alt + H)">Skitoo</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
         </div>
-        <main id="main" class="main">
-
-<h1>Journal</h1>  
-    <div class="archive-year">2017</div>  
-    <ul>
-        <li><a href="modifier-la-valeur-fsinotifymax_user_watches-sous-archlinux.html">Modifier la valeur fs.inotify.max_user_watches sous Archlinux</a></li>
-        <li><a href="comment-resoudre-lerreur-wxe_driverso-sous-elixir.html">Comment résoudre l'erreur "wxe_driver.so" sous Elixir</a></li>
-        <li><a href="error-key-could-not-be-looked-up-remotely.html">error: key could not be looked up remotely</a></li>
-        <li><a href="vim-explique-a-ma-grand-mere.html">Vim expliqué à ma grand-mère</a></li>
-    </ul>
-    <div class="archive-year">2016</div>  
-    <ul>
-        <li><a href="revenir-sur-une-version-anterieure-dun-package-archlinux.html">Revenir sur une version antérieure d'un package Archlinux</a></li>
-        <li><a href="modifier-lextension-dune-url-avec-nginx.html">Modifier l'extension d'une url avec NginX</a></li>
-    </ul>
-    <div class="archive-year">2014</div>  
-    <ul>
-        <li><a href="convertir-un-objet-datetime-python-en-timestamp.html">Convertir un objet datetime Python en timestamp</a></li>
-        <li><a href="raccourcis-clavier-sous-bash.html">Raccourcis clavier sous Bash</a></li>
-        <li><a href="gestion-des-groupes-sous-linux.html">Gestion des groupes sous Linux</a></li>
-        <li><a href="logger-toutes-les-exceptions-en-python.html">Logger toutes les exceptions en Python</a></li>
-    </ul>
-    <div class="archive-year">2012</div>  
-    <ul>
-        <li><a href="tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html">Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii</a></li>
-        <li><a href="raspberry-pi-lordinateur-a-bas-cout.html">Raspberry Pi, l'ordinateur à bas coût</a></li>
-        <li><a href="pyxel-edit-loutil-de-creation-de-pixel-art-et-de-tileset.html">Pyxel Edit, l'outil de création de pixel art et de tileset</a></li>
-        <li><a href="projet-monocle-le-nouveau-profiler-flash-de-chez-adobe.html">Projet Monocle, le nouveau profiler Flash de chez Adobe</a></li>
-        <li><a href="comment-controler-un-jeu-de-plateforme-sur-mobile-ou-tablette.html">Comment contrôler un jeu de plateforme sur mobile ou tablette ?</a></li>
-        <li><a href="les-pas-perdus.html">Les pas perdus</a></li>
-    </ul>
-    <div class="archive-year">2011</div>  
-    <ul>
-        <li><a href="documentaire-arduino.html">Documentaire Arduino</a></li>
-        <li><a href="500px.html">500px !</a></li>
-    </ul>
-    <div class="archive-year">2010</div>  
-    <ul>
-        <li><a href="premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html">Premier montage Arduino : Contrôler un servo moteur avec un Nunchuck Wii</a></li>
-        <li><a href="arduino.html">Arduino !</a></li>
-        <li><a href="vaisseau-spatial-fait-maison.html">Vaisseau spatial fait maison</a></li>
-        <li><a href="tutoriel-logger-du-framework-as3-skitools.html">Tutoriel - Logger du framework AS3 Skitools</a></li>
-    </ul>
-
-<div class="follow-me">
-    <hr>
-    Suivez moi sur <a href="https://twitter.com/skitoo/" title="Compte Twitter">Twitter</a> et sur <a href="https://github.com/skitoo/" title="Compte Github">Github</a>.
-</div>
-        </main>
-    </div>
-
-    <footer id="footer" class="footer">
-        <ul>
-          <li><a href="mailto:contact@skitoo.net" title="Mail de Contact"><i class="icon-envelope"></i> Contact</a></li>
-            <li><a href="/feeds/all.atom.xml" title="Flux RSS"><i class="icon-rss"></i> RSS</a></li>
-            <li><a href="https://github.com/skitoo/" title="Compte Github"><i class="icon-github"></i> Github</a></li>
-            <li><a href="https://twitter.com/skitoo/" title="Compte Twitter"><i class="icon-twitter"></i> Twitter</a></li>
-            <li><a href="./journal.html"><i class="icon-book"></i> Journal</a></li>
-            <li><a href="./conferences.html"><i class="icon-microphonealt"></i> Conférences</a></li>
-            <li><a href="./projets.html"><i class="icon-flaskfull"></i> Projets</a></li>
-            <li><a href="./colophon.html"><i class="icon-leaf"></i> Colophon</a></li>
+        <ul id="menu">
+            <li>
+                <a href="https://www.skitoo.net/journal.html" title="Journal">
+                    <span>Journal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/projets.html" title="Projets">
+                    <span>Projets</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/photos.html" title="Photos">
+                    <span>Photos</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/conferences.html" title="Conférences">
+                    <span>Conférences</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/a-propos.html" title="A propos">
+                    <span>A propos</span>
+                </a>
+            </li>
         </ul>
-        <p id="copyright" class="copyright">© 2018 Alexis Couronne</p>
-    </footer>
+    </nav>
+</header>
+<main class="main">
+
+<header class="page-header">
+  <h1>Journal</h1>
+</header>
+<div class="archive-year">
+  <h2 class="archive-year-header">2017
+  </h2>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Modifier la valeur fs.inotify.max_user_watches sous Archlinux
+        </h3>
+        <div class="archive-meta"><span title='2017-10-31 00:00:00 +0000 UTC'>October 31, 2017</span></div>
+        <a class="entry-link" aria-label="post link to Modifier la valeur fs.inotify.max_user_watches sous Archlinux" href="https://www.skitoo.net/modifier-la-valeur-fsinotifymax_user_watches-sous-archlinux.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Comment résoudre l&rsquo;erreur &ldquo;wxe_driver.so&rdquo; sous Elixir
+        </h3>
+        <div class="archive-meta"><span title='2017-10-26 00:00:00 +0000 UTC'>October 26, 2017</span></div>
+        <a class="entry-link" aria-label="post link to Comment résoudre l&#39;erreur &#34;wxe_driver.so&#34; sous Elixir" href="https://www.skitoo.net/comment-resoudre-lerreur-wxe_driverso-sous-elixir.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">error: key could not be looked up remotely
+        </h3>
+        <div class="archive-meta"><span title='2017-10-24 00:00:00 +0000 UTC'>October 24, 2017</span></div>
+        <a class="entry-link" aria-label="post link to error: key could not be looked up remotely" href="https://www.skitoo.net/error-key-could-not-be-looked-up-remotely.html"></a>
+      </div>
     </div>
-  </body>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Vim expliqué à ma grand-mère
+        </h3>
+        <div class="archive-meta"><span title='2017-07-22 00:00:00 +0000 UTC'>July 22, 2017</span></div>
+        <a class="entry-link" aria-label="post link to Vim expliqué à ma grand-mère" href="https://www.skitoo.net/vim-explique-a-ma-grand-mere.html"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="archive-year">
+  <h2 class="archive-year-header">2016
+  </h2>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Revenir sur une version antérieure d&rsquo;un package Archlinux
+        </h3>
+        <div class="archive-meta"><span title='2016-06-09 00:00:00 +0000 UTC'>June 9, 2016</span></div>
+        <a class="entry-link" aria-label="post link to Revenir sur une version antérieure d&#39;un package Archlinux" href="https://www.skitoo.net/revenir-sur-une-version-anterieure-dun-package-archlinux.html"></a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Modifier l&rsquo;extension d&rsquo;une url avec NginX
+        </h3>
+        <div class="archive-meta"><span title='2016-01-10 00:00:00 +0000 UTC'>January 10, 2016</span></div>
+        <a class="entry-link" aria-label="post link to Modifier l&#39;extension d&#39;une url avec NginX" href="https://www.skitoo.net/modifier-lextension-dune-url-avec-nginx.html"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="archive-year">
+  <h2 class="archive-year-header">2014
+  </h2>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Convertir un objet datetime Python en timestamp
+        </h3>
+        <div class="archive-meta"><span title='2014-07-09 00:00:00 +0000 UTC'>July 9, 2014</span></div>
+        <a class="entry-link" aria-label="post link to Convertir un objet datetime Python en timestamp" href="https://www.skitoo.net/convertir-un-objet-datetime-python-en-timestamp.html"></a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Raccourcis clavier sous Bash
+        </h3>
+        <div class="archive-meta"><span title='2014-06-19 00:00:00 +0000 UTC'>June 19, 2014</span></div>
+        <a class="entry-link" aria-label="post link to Raccourcis clavier sous Bash" href="https://www.skitoo.net/raccourcis-clavier-sous-bash.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Gestion des groupes sous Linux
+        </h3>
+        <div class="archive-meta"><span title='2014-06-05 00:00:00 +0000 UTC'>June 5, 2014</span></div>
+        <a class="entry-link" aria-label="post link to Gestion des groupes sous Linux" href="https://www.skitoo.net/gestion-des-groupes-sous-linux.html"></a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Logger toutes les exceptions en Python
+        </h3>
+        <div class="archive-meta"><span title='2014-05-27 00:00:00 +0000 UTC'>May 27, 2014</span></div>
+        <a class="entry-link" aria-label="post link to Logger toutes les exceptions en Python" href="https://www.skitoo.net/logger-toutes-les-exceptions-en-python.html"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="archive-year">
+  <h2 class="archive-year-header">2012
+  </h2>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii
+        </h3>
+        <div class="archive-meta"><span title='2012-09-12 00:00:00 +0000 UTC'>September 12, 2012</span></div>
+        <a class="entry-link" aria-label="post link to Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii" href="https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Raspberry Pi, l&rsquo;ordinateur à bas coût
+        </h3>
+        <div class="archive-meta"><span title='2012-09-11 00:00:00 +0000 UTC'>September 11, 2012</span></div>
+        <a class="entry-link" aria-label="post link to Raspberry Pi, l&#39;ordinateur à bas coût" href="https://www.skitoo.net/raspberry-pi-lordinateur-a-bas-cout.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Pyxel Edit, l&rsquo;outil de création de pixel art et de tileset
+        </h3>
+        <div class="archive-meta"><span title='2012-09-06 00:00:00 +0000 UTC'>September 6, 2012</span></div>
+        <a class="entry-link" aria-label="post link to Pyxel Edit, l&#39;outil de création de pixel art et de tileset" href="https://www.skitoo.net/pyxel-edit-loutil-de-creation-de-pixel-art-et-de-tileset.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Projet Monocle, le nouveau profiler Flash de chez Adobe
+        </h3>
+        <div class="archive-meta"><span title='2012-09-05 00:00:00 +0000 UTC'>September 5, 2012</span></div>
+        <a class="entry-link" aria-label="post link to Projet Monocle, le nouveau profiler Flash de chez Adobe" href="https://www.skitoo.net/projet-monocle-le-nouveau-profiler-flash-de-chez-adobe.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Comment contrôler un jeu de plateforme sur mobile ou tablette ?
+        </h3>
+        <div class="archive-meta"><span title='2012-09-04 00:00:00 +0000 UTC'>September 4, 2012</span></div>
+        <a class="entry-link" aria-label="post link to Comment contrôler un jeu de plateforme sur mobile ou tablette ?" href="https://www.skitoo.net/comment-controler-un-jeu-de-plateforme-sur-mobile-ou-tablette.html"></a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Les pas perdus
+        </h3>
+        <div class="archive-meta"><span title='2012-08-28 00:00:00 +0000 UTC'>August 28, 2012</span></div>
+        <a class="entry-link" aria-label="post link to Les pas perdus" href="https://www.skitoo.net/les-pas-perdus.html"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="archive-year">
+  <h2 class="archive-year-header">2011
+  </h2>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Documentaire Arduino
+        </h3>
+        <div class="archive-meta"><span title='2011-09-15 00:00:00 +0000 UTC'>September 15, 2011</span></div>
+        <a class="entry-link" aria-label="post link to Documentaire Arduino" href="https://www.skitoo.net/documentaire-arduino.html"></a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">500px !
+        </h3>
+        <div class="archive-meta"><span title='2011-08-15 00:00:00 +0000 UTC'>August 15, 2011</span></div>
+        <a class="entry-link" aria-label="post link to 500px !" href="https://www.skitoo.net/500px.html"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="archive-year">
+  <h2 class="archive-year-header">2010
+  </h2>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Premier montage Arduino : Contrôler un servo moteur avec un Nunchuck Wii
+        </h3>
+        <div class="archive-meta"><span title='2010-10-17 00:00:00 +0000 UTC'>October 17, 2010</span></div>
+        <a class="entry-link" aria-label="post link to Premier montage Arduino : Contrôler un servo moteur avec un Nunchuck Wii" href="https://www.skitoo.net/premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Arduino !
+        </h3>
+        <div class="archive-meta"><span title='2010-10-12 00:00:00 +0000 UTC'>October 12, 2010</span></div>
+        <a class="entry-link" aria-label="post link to Arduino !" href="https://www.skitoo.net/arduino.html"></a>
+      </div>
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Vaisseau spatial fait maison
+        </h3>
+        <div class="archive-meta"><span title='2010-10-03 00:00:00 +0000 UTC'>October 3, 2010</span></div>
+        <a class="entry-link" aria-label="post link to Vaisseau spatial fait maison" href="https://www.skitoo.net/vaisseau-spatial-fait-maison.html"></a>
+      </div>
+    </div>
+  </div>
+  <div class="archive-month" style="border-bottom:0; padding:0;">
+    <div class="archive-posts" style="margin-left:100px">
+      <div class="archive-entry">
+        <h3 class="archive-entry-title">Tutoriel - Logger du framework AS3 Skitools
+        </h3>
+        <div class="archive-meta"><span title='2010-08-15 00:00:00 +0000 UTC'>August 15, 2010</span></div>
+        <a class="entry-link" aria-label="post link to Tutoriel - Logger du framework AS3 Skitools" href="https://www.skitoo.net/tutoriel-logger-du-framework-as3-skitools.html"></a>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2021 <a href="https://www.skitoo.net">Alexis Couronne</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>

@@ -1,200 +1,398 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii</title>
-    <meta name="description" content="">
-    <link rel="canonical" href="./tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alexis Couronne">
-    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Skitoo ATOM Feed" />
-    <link href="./theme/css/style.css" rel="stylesheet">
-    <link href="./theme/css/whhg.css" rel="stylesheet">
-    <link href="./theme/css/monokai.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
 
-    <link rel="shortcut icon" href="./theme/img/favicon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./theme/img/apple-touch-icon-144.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./theme/img/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./theme/img/apple-touch-icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="./theme/img/apple-touch-icon-57.png">
-  </head>
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii | Skitoo</title>
+<meta name="keywords" content="Electronique, Code" />
+<meta name="description" content="Il a quelques temps (2 ans en fait), j&rsquo;ai réalisé un petit montage basé sur un kit Arduino qui permettait de contrôler un servomoteur à partir d&rsquo;un nunchuck. Suite à de nombreuses demandes, j&rsquo;ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.
+Ce dont vous avez besoin  1 servomoteur 1 nunchuk de console Wii 1 kit Arduino (pour ma part j&rsquo;utilise le Arduino UNO R3) 1 breadboard (ou platine de prototypage) quelques straps (ou fils de liaison)  Les principes du montage Le nunchuck Wii utilise le protocole de communication I2C.">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.skitoo.net/skitoo-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.skitoo.net/skitoo-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.skitoo.net/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.skitoo.net/skitoo-icon.png">
+<link rel="mask-icon" href="https://www.skitoo.net/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.89.4" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-  <body>
-    <div class="container">
-    <header id="header" class="header">
-        <nav class="header-content">
-            <div class="logo">
-                <a href="." title="Skitoo.net"><img src="./theme/img/logo-skitoo.png" alt="Alexis Couronne" width="140" height="44"></a>
-            </div>
-            <ul class="menu">
-              <li><a href="./journal.html">journal</a></li>
-              <li><a href="./conferences.html">conférences</a></li>
-              <li><a href="./projets.html">projets</a></li>
-              <li><a href="./colophon.html">colophon</a></li>
-            </ul>
-        </nav>
-    </header>
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-    <div id="content" class="content">
-        <div id="sidebar" class="sidebar">
-        <div class="icon icon-diode"></div>
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii" />
+<meta property="og:description" content="Il a quelques temps (2 ans en fait), j&rsquo;ai réalisé un petit montage basé sur un kit Arduino qui permettait de contrôler un servomoteur à partir d&rsquo;un nunchuck. Suite à de nombreuses demandes, j&rsquo;ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.
+Ce dont vous avez besoin  1 servomoteur 1 nunchuk de console Wii 1 kit Arduino (pour ma part j&rsquo;utilise le Arduino UNO R3) 1 breadboard (ou platine de prototypage) quelques straps (ou fils de liaison)  Les principes du montage Le nunchuck Wii utilise le protocole de communication I2C." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2012-09-12T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2012-09-12T00:00:00&#43;00:00" /><meta property="og:site_name" content="Skitoo" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii"/>
+<meta name="twitter:description" content="Il a quelques temps (2 ans en fait), j&rsquo;ai réalisé un petit montage basé sur un kit Arduino qui permettait de contrôler un servomoteur à partir d&rsquo;un nunchuck. Suite à de nombreuses demandes, j&rsquo;ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.
+Ce dont vous avez besoin  1 servomoteur 1 nunchuk de console Wii 1 kit Arduino (pour ma part j&rsquo;utilise le Arduino UNO R3) 1 breadboard (ou platine de prototypage) quelques straps (ou fils de liaison)  Les principes du montage Le nunchuck Wii utilise le protocole de communication I2C."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://www.skitoo.net/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii",
+      "item": "https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii",
+  "name": "Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii",
+  "description": "Il a quelques temps (2 ans en fait), j\u0026rsquo;ai réalisé un petit montage basé sur un kit Arduino qui permettait de contrôler un servomoteur à partir d\u0026rsquo;un nunchuck. Suite à de nombreuses demandes, j\u0026rsquo;ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.\nCe dont vous avez besoin  1 servomoteur 1 nunchuk de console Wii 1 kit Arduino (pour ma part j\u0026rsquo;utilise le Arduino UNO R3) 1 breadboard (ou platine de prototypage) quelques straps (ou fils de liaison)  Les principes du montage Le nunchuck Wii utilise le protocole de communication I2C.",
+  "keywords": [
+    "Electronique", "Code"
+  ],
+  "articleBody": "Il a quelques temps (2 ans en fait), j’ai réalisé un petit montage basé sur un kit Arduino qui permettait de contrôler un servomoteur à partir d’un nunchuck. Suite à de nombreuses demandes, j’ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.\nCe dont vous avez besoin  1 servomoteur 1 nunchuk de console Wii 1 kit Arduino (pour ma part j’utilise le Arduino UNO R3) 1 breadboard (ou platine de prototypage) quelques straps (ou fils de liaison)  Les principes du montage Le nunchuck Wii utilise le protocole de communication I2C. Ce qui nous va très bien puisque Arduino gère très bien ce protocole via les broches analogiques 4 (SDA) et 5 (SCL). Depuis la version Uno R3, 2 nouvelles broches peuvent être utilisées pour cela : SDA et SCL qui se trouvent à coté de la broche AREF. Si vous possédez cette version de l’Arduino vous pouvez donc au choix utiliser l’une ou l’autre paire de broches. Pour ma part je vais utiliser les broches analogiques 4 et 5.\nCoté software, Arduino possède une librairie prévu pour cela : Wire.\nLa photo qui suit nous montre à quoi correspond chaque broche du câble Nunchuck Wii.\nVous remarquerez qu’en plus des broches SDA et SCL, le nunchuck a besoin d’une alimentation de 3,3v. Attention à ne pas mettre une tension supérieure au risque de le déteriorer.\nLe servomoteur quant à lui possède 3 fils : 2 pour l’alimentation (+5v et GND) et un troisième pour le contrôler. Ce dernier doit absolument être connecté à l’une des 6 broches PWM de votre Arduino.\nCoté software, là aussi, Arduino nous propose une librairie qui va bien : Servo.\nPartie électronique Pour la réalisation des schémas qui suivent j’ai utilisé un logiciel bien pratique : Fritzing. Celui-ci est gratuit et multi-plateforme. Il permet de réaliser rapidement des montages avec une vue de la platine d’essai, une vue shématique et enfin une vue du circuit imprimé. Vous trouverez à la fin de cette article le fichier Fritzing du montage.\nLe composant “Nunchuck” n’étant pas encore disponible dans la bibliothèque de Fritzing j’ai pris un composant assez proche pour le représenter dans notre schéma.\nVue de la platine d’essai Vue shématique du montage Comme vous pouvez le constater, le schéma de ce montage est très simple !\nPartie programmation #include ;#include ; // Doit être ajusté en fonction de chaque nunchuck #define ZEROX 530 #define ZEROY 530 #define ZEROZ 530  // adresse I2C du nunchuck #define WII_NUNCHUK_I2C_ADDRESS 0x52  // définition d'une variable Servo Servo servomoteur; // définition d'une variable counter int counter; // définition d'un tableau de données uint8_t data[6]; void setup() { // on attache le servomoteur à la pin 11 (PWM)  servomoteur.attach(11); // initialisation du nunchuck  Wire.begin(); Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS); Wire.write(0xF0); Wire.write(0x55); Wire.endTransmission(); Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS); Wire.write(0xFB); Wire.write(0x00); Wire.endTransmission(); } void loop() { // on demande 6 octets au nunchuck  Wire.requestFrom(WII_NUNCHUK_I2C_ADDRESS, 6); counter = 0; // tant qu'il y a des données  while(Wire.available()) { // on récupère les données  data[counter++] = Wire.read(); } // on réinitialise le nunchuck pour la prochaine demande  Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS); Wire.write(0x00); Wire.endTransmission(); if(counter = 5) { // on extrait les données  // dans mon exemple j'utilise uniquement les données d'accélération sur l'axe Y  double accelX = ((data[2]  2) + ((data[5]  2) \u0026 0x03) - ZEROX); double accelY = ((data[3]  2) + ((data[5]  4) \u0026 0x03) - ZEROY); double accelZ = ((data[4]  2) + ((data[5]  6) \u0026 0x03) - ZEROZ); // on limite la valeur entre -180 et 180  int value = constrain(accelY, -180, 180); // on mappe cette valeur pour le servomoteur soit entre 0 et 180  value = map(value, -180, 180, 0, 180); // on écrit sur le servomoteur la valeur  servomoteur.write(value); // un petit delai pour pas saturer le servomoteur  delay(100); } } Ce code a été inspiré par celui-ci.\nRésultat Voici donc le résultat :\n  A vous de jouer :-)\nTéléchargez le fichier zip des sources et schéma.\n",
+  "wordCount" : "657",
+  "inLanguage": "fr",
+  "datePublished": "2012-09-12T00:00:00Z",
+  "dateModified": "2012-09-12T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.skitoo.net/tutoriel-arduino-comment-controler-un-servomoteur-avec-un-nunchuck-de-wii.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Skitoo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.skitoo.net/skitoo-icon.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.skitoo.net" accesskey="h" title="Skitoo (Alt + H)">Skitoo</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
         </div>
-        <main id="main" class="main">
-<article>
-    <header>
-        <h1>Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii</h1>
-        <span class="publication-date">
-            <time datetime="2012-09">Septembre 2012</time>, Alexis Couronne - 
-            [
-                <a href="tag/electronique.html">Electronique</a> ::                 <a href="tag/code.html">Code</a>            ]
-        </span>
-    </header>
-    <div id="ticket-content" class="ticket-content">
-        <p>Il a quelques temps (2 ans en fait), j'ai réalisé un petit montage basé sur un <a href="/arduino.html">kit Arduino</a> qui permettait de <a href="/premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html">contrôler un servomoteur à partir d'un nunchuck</a>. Suite à de nombreuses demandes, j'ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.</p>
-<h2>Ce dont vous avez besoin</h2>
+        <ul id="menu">
+            <li>
+                <a href="https://www.skitoo.net/journal.html" title="Journal">
+                    <span>Journal</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/projets.html" title="Projets">
+                    <span>Projets</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/photos.html" title="Photos">
+                    <span>Photos</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/conferences.html" title="Conférences">
+                    <span>Conférences</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.skitoo.net/a-propos.html" title="A propos">
+                    <span>A propos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Tutoriel Arduino : Comment contrôler un servomoteur avec un nunchuck de Wii
+    </h1>
+    <div class="post-meta"><span title='2012-09-12 00:00:00 +0000 UTC'>September 12, 2012</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Il a quelques temps (2 ans en fait), j&rsquo;ai réalisé un petit montage basé sur un <a href="/arduino.html">kit Arduino</a> qui permettait de <a href="/premier-montage-arduino-controler-un-servo-moteur-avec-un-nunchuck-wii.html">contrôler un servomoteur à partir d&rsquo;un nunchuck</a>. Suite à de nombreuses demandes, j&rsquo;ai décidé (avec beaucoup de retard) de réaliser un petit tutoriel à ce sujet.</p>
+<h2 id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin<a hidden class="anchor" aria-hidden="true" href="#ce-dont-vous-avez-besoin">#</a></h2>
 <ul>
 <li>1 servomoteur</li>
 <li>1 nunchuk de console Wii</li>
-<li>1 kit Arduino (pour ma part j'utilise le <a href="http://arduino.cc/en/Main/ArduinoBoardUno">Arduino UNO R3</a>)</li>
+<li>1 kit Arduino (pour ma part j&rsquo;utilise le <a href="http://arduino.cc/en/Main/ArduinoBoardUno">Arduino UNO R3</a>)</li>
 <li>1 breadboard (ou platine de prototypage)</li>
 <li>quelques straps (ou fils de liaison)</li>
 </ul>
-<h2>Les principes du montage</h2>
-<p>Le nunchuck Wii utilise <a href="http://fr.wikipedia.org/wiki/I2C">le protocole de communication I2C</a>. Ce qui nous va très bien puisque Arduino gère très bien ce protocole via les broches analogiques 4 (SDA) et 5 (SCL). Depuis la version Uno R3, 2 nouvelles broches peuvent être utilisées pour cela : SDA et SCL qui se trouvent à coté de la broche AREF. Si vous possédez cette version de l'Arduino vous pouvez donc au choix utiliser l'une ou l'autre paire de broches. Pour ma part je vais utiliser les broches analogiques 4 et 5.</p>
+<h2 id="les-principes-du-montage">Les principes du montage<a hidden class="anchor" aria-hidden="true" href="#les-principes-du-montage">#</a></h2>
+<p>Le nunchuck Wii utilise <a href="http://fr.wikipedia.org/wiki/I2C">le protocole de communication I2C</a>. Ce qui nous va très bien puisque Arduino gère très bien ce protocole via les broches analogiques 4 (SDA) et 5 (SCL). Depuis la version Uno R3, 2 nouvelles broches peuvent être utilisées pour cela : SDA et SCL qui se trouvent à coté de la broche AREF. Si vous possédez cette version de l&rsquo;Arduino vous pouvez donc au choix utiliser l&rsquo;une ou l&rsquo;autre paire de broches. Pour ma part je vais utiliser les broches analogiques 4 et 5.</p>
 <p>Coté software, Arduino possède une librairie prévu pour cela : <a href="http://arduino.cc/en/Reference/Wire">Wire</a>.</p>
 <p>La photo qui suit nous montre à quoi correspond chaque broche du câble Nunchuck Wii.</p>
-<p><img alt="Schéma du câble Nunchuck" src="./images/nunchuck-cable-schema.png" /></p>
-<p>Vous remarquerez qu'en plus des broches SDA et SCL, le nunchuck a besoin d'une alimentation de 3,3v. Attention à ne pas mettre une tension supérieure au risque de le déteriorer.</p>
-<p>Le servomoteur quant à lui possède 3 fils : 2 pour l'alimentation (+5v et GND) et un troisième pour le contrôler. Ce dernier doit absolument être connecté à l'une des 6 broches <a href="http://fr.wikipedia.org/wiki/Modulation_de_largeur_d'impulsion">PWM</a> de votre Arduino.</p>
+<p><img loading="lazy" src="/images/nunchuck-cable-schema.png" alt="Schéma du câble Nunchuck"  />
+</p>
+<p>Vous remarquerez qu&rsquo;en plus des broches SDA et SCL, le nunchuck a besoin d&rsquo;une alimentation de 3,3v. Attention à ne pas mettre une tension supérieure au risque de le déteriorer.</p>
+<p>Le servomoteur quant à lui possède 3 fils : 2 pour l&rsquo;alimentation (+5v et GND) et un troisième pour le contrôler. Ce dernier doit absolument être connecté à l&rsquo;une des 6 broches <a href="http://fr.wikipedia.org/wiki/Modulation_de_largeur_d'impulsion">PWM</a> de votre Arduino.</p>
 <p>Coté software, là aussi, Arduino nous propose une librairie qui va bien : <a href="http://arduino.cc/en/Reference/Servo">Servo</a>.</p>
-<h2>Partie électronique</h2>
-<p>Pour la réalisation des schémas qui suivent j'ai utilisé un logiciel bien pratique : <a href="http://fritzing.org/">Fritzing</a>. Celui-ci est gratuit et multi-plateforme. Il permet de réaliser rapidement des montages avec une vue de la platine d'essai, une vue shématique et enfin une vue du circuit imprimé. Vous trouverez à la fin de cette article le fichier Fritzing du montage.</p>
-<p>Le composant "Nunchuck" n'étant pas encore disponible dans la bibliothèque de Fritzing j'ai pris un composant assez proche pour le représenter dans notre schéma.</p>
-<h4>Vue de la platine d'essai</h4>
-<p><img alt="Platine d'essai" src="./images/arduino-nunchuck-servo-platine.png" /></p>
-<h4>Vue shématique du montage</h4>
-<p><img alt="Schéma" src="./images/arduino-nunchuck-servo-schema.png" /></p>
+<h2 id="partie-électronique">Partie électronique<a hidden class="anchor" aria-hidden="true" href="#partie-électronique">#</a></h2>
+<p>Pour la réalisation des schémas qui suivent j&rsquo;ai utilisé un logiciel bien pratique : <a href="http://fritzing.org/">Fritzing</a>. Celui-ci est gratuit et multi-plateforme. Il permet de réaliser rapidement des montages avec une vue de la platine d&rsquo;essai, une vue shématique et enfin une vue du circuit imprimé. Vous trouverez à la fin de cette article le fichier Fritzing du montage.</p>
+<p>Le composant &ldquo;Nunchuck&rdquo; n&rsquo;étant pas encore disponible dans la bibliothèque de Fritzing j&rsquo;ai pris un composant assez proche pour le représenter dans notre schéma.</p>
+<h4 id="vue-de-la-platine-dessai">Vue de la platine d&rsquo;essai<a hidden class="anchor" aria-hidden="true" href="#vue-de-la-platine-dessai">#</a></h4>
+<p><img loading="lazy" src="/images/arduino-nunchuck-servo-platine.png" alt="Platine d&amp;rsquo;essai"  />
+</p>
+<h4 id="vue-shématique-du-montage">Vue shématique du montage<a hidden class="anchor" aria-hidden="true" href="#vue-shématique-du-montage">#</a></h4>
+<p><img loading="lazy" src="/images/arduino-nunchuck-servo-schema.png" alt="Schéma"  />
+</p>
 <p>Comme vous pouvez le constater, le schéma de ce montage est très simple !</p>
-<h2>Partie programmation</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Servo.h&gt;;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;Wire.h&gt;;</span><span class="cp"></span>
+<h2 id="partie-programmation">Partie programmation<a hidden class="anchor" aria-hidden="true" href="#partie-programmation">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Servo.h&gt;;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Wire.h&gt;;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Doit être ajusté en fonction de chaque nunchuck
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define ZEROX 530
+</span><span style="color:#75715e">#define ZEROY 530
+</span><span style="color:#75715e">#define ZEROZ 530
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// adresse I2C du nunchuck
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define WII_NUNCHUK_I2C_ADDRESS 0x52
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// définition d&#39;une variable Servo
+</span><span style="color:#75715e"></span>Servo servomoteur;
 
-<span class="c1">// Doit être ajusté en fonction de chaque nunchuck</span>
-<span class="cp">#define ZEROX 530</span>
-<span class="cp">#define ZEROY 530</span>
-<span class="cp">#define ZEROZ 530</span>
+<span style="color:#75715e">// définition d&#39;une variable counter
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> counter;
 
-<span class="c1">// adresse I2C du nunchuck</span>
-<span class="cp">#define WII_NUNCHUK_I2C_ADDRESS 0x52</span>
+<span style="color:#75715e">// définition d&#39;un tableau de données
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">uint8_t</span> data[<span style="color:#ae81ff">6</span>];
 
-<span class="c1">// définition d&#39;une variable Servo</span>
-<span class="n">Servo</span> <span class="n">servomoteur</span><span class="p">;</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+{
+  <span style="color:#75715e">// on attache le servomoteur à la pin 11 (PWM)
+</span><span style="color:#75715e"></span>  servomoteur.attach(<span style="color:#ae81ff">11</span>);
 
-<span class="c1">// définition d&#39;une variable counter</span>
-<span class="kt">int</span> <span class="n">counter</span><span class="p">;</span>
+  <span style="color:#75715e">// initialisation du nunchuck
+</span><span style="color:#75715e"></span>  Wire.begin();
 
-<span class="c1">// définition d&#39;un tableau de données</span>
-<span class="kt">uint8_t</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+  Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS);
+  Wire.write(<span style="color:#ae81ff">0xF0</span>);
+  Wire.write(<span style="color:#ae81ff">0x55</span>);
+  Wire.endTransmission();
 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
-<span class="p">{</span>
-  <span class="c1">// on attache le servomoteur à la pin 11 (PWM)</span>
-  <span class="n">servomoteur</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span>
-
-  <span class="c1">// initialisation du nunchuck</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-
-  <span class="n">Wire</span><span class="p">.</span><span class="n">beginTransmission</span><span class="p">(</span><span class="n">WII_NUNCHUK_I2C_ADDRESS</span><span class="p">);</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0xF0</span><span class="p">);</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x55</span><span class="p">);</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">endTransmission</span><span class="p">();</span>
-
-  <span class="n">Wire</span><span class="p">.</span><span class="n">beginTransmission</span><span class="p">(</span><span class="n">WII_NUNCHUK_I2C_ADDRESS</span><span class="p">);</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0xFB</span><span class="p">);</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>
-  <span class="n">Wire</span><span class="p">.</span><span class="n">endTransmission</span><span class="p">();</span>
-<span class="p">}</span>
-
-
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">// on demande 6 octets au nunchuck</span>
-    <span class="n">Wire</span><span class="p">.</span><span class="n">requestFrom</span><span class="p">(</span><span class="n">WII_NUNCHUK_I2C_ADDRESS</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-
-    <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="c1">// tant qu&#39;il y a des données</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">Wire</span><span class="p">.</span><span class="n">available</span><span class="p">())</span>
-    <span class="p">{</span>
-      <span class="c1">// on récupère les données</span>
-      <span class="n">data</span><span class="p">[</span><span class="n">counter</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">Wire</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="c1">// on réinitialise le nunchuck pour la prochaine demande</span>
-    <span class="n">Wire</span><span class="p">.</span><span class="n">beginTransmission</span><span class="p">(</span><span class="n">WII_NUNCHUK_I2C_ADDRESS</span><span class="p">);</span>
-    <span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>
-    <span class="n">Wire</span><span class="p">.</span><span class="n">endTransmission</span><span class="p">();</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="n">counter</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span>
-    <span class="p">{</span>
-      <span class="c1">// on extrait les données</span>
-      <span class="c1">// dans mon exemple j&#39;utilise uniquement les données d&#39;accélération sur l&#39;axe Y</span>
-      <span class="kt">double</span> <span class="n">accelX</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x03</span><span class="p">)</span> <span class="o">-</span> <span class="n">ZEROX</span><span class="p">);</span>
-      <span class="kt">double</span> <span class="n">accelY</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x03</span><span class="p">)</span> <span class="o">-</span> <span class="n">ZEROY</span><span class="p">);</span>
-      <span class="kt">double</span> <span class="n">accelZ</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x03</span><span class="p">)</span> <span class="o">-</span> <span class="n">ZEROZ</span><span class="p">);</span>
-
-      <span class="c1">// on limite la valeur entre -180 et 180</span>
-      <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">constrain</span><span class="p">(</span><span class="n">accelY</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">);</span>
-      <span class="c1">// on mappe cette valeur pour le servomoteur soit entre 0 et 180</span>
-      <span class="n">value</span> <span class="o">=</span> <span class="n">map</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">);</span>
-      <span class="c1">// on écrit sur le servomoteur la valeur</span>
-      <span class="n">servomoteur</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
-
-      <span class="c1">// un petit delai pour pas saturer le servomoteur</span>
-      <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+  Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS);
+  Wire.write(<span style="color:#ae81ff">0xFB</span>);
+  Wire.write(<span style="color:#ae81ff">0x00</span>);
+  Wire.endTransmission();
+}
 
 
-<p>Ce code a été inspiré par <a href="https://github.com/chrisgilmerproj/WiiChuck">celui-ci</a>.</p>
-<h2>Résultat</h2>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
+{
+    <span style="color:#75715e">// on demande 6 octets au nunchuck
+</span><span style="color:#75715e"></span>    Wire.requestFrom(WII_NUNCHUK_I2C_ADDRESS, <span style="color:#ae81ff">6</span>);
+
+    counter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#75715e">// tant qu&#39;il y a des données
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span>(Wire.available())
+    {
+      <span style="color:#75715e">// on récupère les données
+</span><span style="color:#75715e"></span>      data[counter<span style="color:#f92672">++</span>] <span style="color:#f92672">=</span> Wire.read();
+    }
+
+    <span style="color:#75715e">// on réinitialise le nunchuck pour la prochaine demande
+</span><span style="color:#75715e"></span>    Wire.beginTransmission(WII_NUNCHUK_I2C_ADDRESS);
+    Wire.write(<span style="color:#ae81ff">0x00</span>);
+    Wire.endTransmission();
+
+    <span style="color:#66d9ef">if</span>(counter <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">5</span>)
+    {
+      <span style="color:#75715e">// on extrait les données
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// dans mon exemple j&#39;utilise uniquement les données d&#39;accélération sur l&#39;axe Y
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">double</span> accelX <span style="color:#f92672">=</span> ((data[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> ((data[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x03</span>) <span style="color:#f92672">-</span> ZEROX);
+      <span style="color:#66d9ef">double</span> accelY <span style="color:#f92672">=</span> ((data[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> ((data[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">4</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x03</span>) <span style="color:#f92672">-</span> ZEROY);
+      <span style="color:#66d9ef">double</span> accelZ <span style="color:#f92672">=</span> ((data[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> ((data[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">6</span>) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x03</span>) <span style="color:#f92672">-</span> ZEROZ);
+
+      <span style="color:#75715e">// on limite la valeur entre -180 et 180
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> constrain(accelY, <span style="color:#f92672">-</span><span style="color:#ae81ff">180</span>, <span style="color:#ae81ff">180</span>);
+      <span style="color:#75715e">// on mappe cette valeur pour le servomoteur soit entre 0 et 180
+</span><span style="color:#75715e"></span>      value <span style="color:#f92672">=</span> map(value, <span style="color:#f92672">-</span><span style="color:#ae81ff">180</span>, <span style="color:#ae81ff">180</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">180</span>);
+      <span style="color:#75715e">// on écrit sur le servomoteur la valeur
+</span><span style="color:#75715e"></span>      servomoteur.write(value);
+
+      <span style="color:#75715e">// un petit delai pour pas saturer le servomoteur
+</span><span style="color:#75715e"></span>      delay(<span style="color:#ae81ff">100</span>);
+    }
+}
+</code></pre></div><p>Ce code a été inspiré par <a href="https://github.com/chrisgilmerproj/WiiChuck">celui-ci</a>.</p>
+<h2 id="résultat">Résultat<a hidden class="anchor" aria-hidden="true" href="#résultat">#</a></h2>
 <p>Voici donc le résultat :</p>
-<iframe src="https://player.vimeo.com/video/15865874" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://player.vimeo.com/video/15865874" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 <p>A vous de jouer :-)</p>
 <p>Téléchargez le <a href="/downloads/wii_nunchuck.zip">fichier zip des sources et schéma</a>.</p>
-    </div>
-    <hr class="hr">
-    <div>
-        <ul class="pagination">
-                <li><a href="./raspberry-pi-lordinateur-a-bas-cout.html" rel="prev">&laquo; Précédent</a></li>
-                <li><a href="./logger-toutes-les-exceptions-en-python.html" rel="next">Suivant &raquo;</a></li>
-        </ul>
-    </div>
-    <footer>
-      <p>Des appréciations, des remarques, des questions ? N'hésitez pas à <a href="mailto:contact@skitoo.net">me contacter</a>.</p>
-        <p>Suivez moi sur <a href="https://twitter.com/skitoo/" title="Compte Twitter">Twitter</a> et sur <a href="https://github.com/skitoo/" title="Compte Github">Github</a>.</p>
-    </footer>
-</article>
-        </main>
-    </div>
 
-    <footer id="footer" class="footer">
-        <ul>
-          <li><a href="mailto:contact@skitoo.net" title="Mail de Contact"><i class="icon-envelope"></i> Contact</a></li>
-            <li><a href="/feeds/all.atom.xml" title="Flux RSS"><i class="icon-rss"></i> RSS</a></li>
-            <li><a href="https://github.com/skitoo/" title="Compte Github"><i class="icon-github"></i> Github</a></li>
-            <li><a href="https://twitter.com/skitoo/" title="Compte Twitter"><i class="icon-twitter"></i> Twitter</a></li>
-            <li><a href="./journal.html"><i class="icon-book"></i> Journal</a></li>
-            <li><a href="./conferences.html"><i class="icon-microphonealt"></i> Conférences</a></li>
-            <li><a href="./projets.html"><i class="icon-flaskfull"></i> Projets</a></li>
-            <li><a href="./colophon.html"><i class="icon-leaf"></i> Colophon</a></li>
-        </ul>
-        <p id="copyright" class="copyright">© 2018 Alexis Couronne</p>
-    </footer>
-    </div>
-  </body>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2021 <a href="https://www.skitoo.net">Alexis Couronne</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
 </html>
