@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Skitoo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.skitoo.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.skitoo.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La Réunification des deux Corées</title>
+      <link>https://www.skitoo.net/la-reunification-des-deux-corees.html</link>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.skitoo.net/la-reunification-des-deux-corees.html</guid>
+      <description>Je poste ici la vidéo de la pièce de théâtre que j&amp;rsquo;ai pu jouer avec le club théâtre de la MJC de Onet-le-Chateau fin 2020.
+Désolé pour le son et l&amp;rsquo;image qui sont vraiment de très mauvaise qualité&amp;hellip;
+La Réunification des deux Corées est une pièce de théâtre écrite par Joël Pommerat. Elle est composé de plusieurs instantanés dramatiques proposant un panorama autour du thème de la relation amoureuse.
+  </description>
+    </item>
+    
     <item>
       <title>Modifier la valeur fs.inotify.max_user_watches sous Archlinux</title>
       <link>https://www.skitoo.net/modifier-la-valeur-fsinotifymax_user_watches-sous-archlinux.html</link>
