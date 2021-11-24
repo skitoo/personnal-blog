@@ -11,7 +11,7 @@ Je poste ici la vidéo de la pièce de théâtre que j'ai pu jouer avec le club 
 Désolé pour le son et l'image qui sont vraiment de très mauvaise qualité...
 
 La Réunification des deux Corées est une pièce de théâtre écrite par Joël Pommerat.
-Elle est composé de plusieurs instantanés dramatiques proposant un panorama autour du thème de la relation amoureuse.
+Elle est composée de plusieurs instantanés dramatiques proposant un panorama autour du thème de la relation amoureuse.
 
 
 {{< youtube iwTfp0tk-RA >}}
