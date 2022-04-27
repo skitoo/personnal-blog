@@ -39,7 +39,7 @@ Sauf que sur des projets contenant un nombre important de fichiers, il peut arri
       <description>Dans le langage Elixir il est fourni un super outil pour debugger et visualiser l&amp;rsquo;ensemble des processus dans votre programme.
 Pour cela, il suffit de lancer la commande suivante dans votre console iex :
 :observer.start # ou :debugger.start Sauf que voilà, sous Archlinux, les dépendances, pour cette fonctionnalité, ne sont pas installé par défaut avec Elixir et vous risquez de rencontrer l&amp;rsquo;erreur suivante :
-[error] ERROR: Could not find &#39;wxe_driver.so&#39; in: /usr/lib/erlang/lib/wx-1.</description>
+[error] ERROR: Could not find &amp;#39;wxe_driver.so&amp;#39; in: /usr/lib/erlang/lib/wx-1.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@ Pour cela, il suffit de lancer la commande suivante dans votre console iex :
       
       <guid>https://www.skitoo.net/error-key-could-not-be-looked-up-remotely.html</guid>
       <description>Voilà 2 ans que j&amp;rsquo;utilise quotidiennement la distribution Linux Archlinux. Mais ce matin, un petit souci vient enrayer mon enthousiasme&amp;hellip; Lors d&amp;rsquo;une tentative de mise à jour des paquets via pacman, une erreur s&amp;rsquo;est produite :
-$ sudo pacman -Syu :: Synchronizing package databases... core is up to date extra is up to date community is up to date multilib is up to date .... .... .... downloading required keys... error: key &amp;#34;EEEEE2EEEE2EEEEE&amp;#34; could not be looked up remotely error: required key missing from keyring error: failed to commit transaction (unexpected error) Errors occurred, no packages were upgraded.</description>
+$ sudo pacman -Syu :: Synchronizing package databases...  core is up to date  extra is up to date  community is up to date  multilib is up to date .... .... .</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@ Une fois installé il suffit de taper la commande suivante pour pouvoir choisir 
       <description>Dans le cas présent, je souhaiterais rediriger tous les appels aux url finissant par *.html vers la même url mais sans extension.
 Exemple : www.skitoo.net/unepage.html vers www.skitoo.net/unepage/
 Pour celà voici la petite astuce qui permet de réaliser cette redirection :
-location ~ \.html$ { rewrite ^/(.*)\.html$ /$1 last; } Source</description>
+location ~ \.html$ {  rewrite ^/(.*)\.html$ /$1 last; } Source</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ location ~ \.html$ { rewrite ^/(.*)\.html$ /$1 last; } Source</description>
       <guid>https://www.skitoo.net/convertir-un-objet-datetime-python-en-timestamp.html</guid>
       <description>Voila un truc que j&amp;rsquo;arrive jamais à me souvenir : comment convertir un objet datetime Python en timestamp.
 Voici le petit bout de code qui permet de faire ça :
-import datetime import time now = datetime.datetime.now() # on récupère la date actuelle timestamp = time.mktime(now.timetuple()) # on effectue la convertion Voila ! Vous l&amp;rsquo;aurez compris c&amp;rsquo;est très simple mais il faut s&amp;rsquo;en souvenir :)
+import datetime import time  now = datetime.datetime.now() # on récupère la date actuelle timestamp = time.mktime(now.timetuple()) # on effectue la convertion Voila ! Vous l&amp;rsquo;aurez compris c&amp;rsquo;est très simple mais il faut s&amp;rsquo;en souvenir :)
 Pour la peine je vous donne la convertion dans l&amp;rsquo;autre sens : de timestamp vers datetime.</description>
     </item>
     

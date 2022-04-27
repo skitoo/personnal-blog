@@ -14,7 +14,7 @@ Pour cela, il suffit de lancer la commande suivante dans votre console iex :
 <meta name="author" content="">
 <link rel="canonical" href="https://www.skitoo.net/comment-resoudre-lerreur-wxe_driverso-sous-elixir.html" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js" integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.skitoo.net/skitoo-icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.skitoo.net/skitoo-icon.png">
@@ -23,7 +23,7 @@ Pour cela, il suffit de lancer la commande suivante dans votre console iex :
 <link rel="mask-icon" href="https://www.skitoo.net/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.89.4" />
+<meta name="generator" content="Hugo 0.96.0" />
 <noscript>
     <style>
         #theme-toggle,
@@ -104,7 +104,7 @@ Pour cela, il suffit de lancer la commande suivante dans votre console iex :
   "@type": "BlogPosting",
   "headline": "Comment résoudre l'erreur \"wxe_driver.so\" sous Elixir",
   "name": "Comment résoudre l\u0027erreur \u0022wxe_driver.so\u0022 sous Elixir",
-  "description": "Dans le langage Elixir il est fourni un super outil pour debugger et visualiser l\u0026rsquo;ensemble des processus dans votre programme.\nPour cela, il suffit de lancer la commande suivante dans votre console iex :\n:observer.start # ou :debugger.start Sauf que voilà, sous Archlinux, les dépendances, pour cette fonctionnalité, ne sont pas installé par défaut avec Elixir et vous risquez de rencontrer l\u0026rsquo;erreur suivante :\n[error] ERROR: Could not find 'wxe_driver.so' in: /usr/lib/erlang/lib/wx-1.",
+  "description": "Dans le langage Elixir il est fourni un super outil pour debugger et visualiser l\u0026rsquo;ensemble des processus dans votre programme.\nPour cela, il suffit de lancer la commande suivante dans votre console iex :\n:observer.start # ou :debugger.start Sauf que voilà, sous Archlinux, les dépendances, pour cette fonctionnalité, ne sont pas installé par défaut avec Elixir et vous risquez de rencontrer l\u0026rsquo;erreur suivante :\n[error] ERROR: Could not find \u0026#39;wxe_driver.so\u0026#39; in: /usr/lib/erlang/lib/wx-1.",
   "keywords": [
     "Code"
   ],
@@ -211,14 +211,14 @@ Pour cela, il suffit de lancer la commande suivante dans votre console iex :
   </header> 
   <div class="post-content"><p>Dans le langage Elixir il est fourni un super outil pour debugger et visualiser l&rsquo;ensemble des processus dans votre programme.</p>
 <p>Pour cela, il suffit de lancer la commande suivante dans votre console iex :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-elixir" data-lang="elixir"><span style="color:#e6db74">:observer</span><span style="color:#f92672">.</span>start
-<span style="color:#75715e"># ou</span>
-<span style="color:#e6db74">:debugger</span><span style="color:#f92672">.</span>start
-</code></pre></div><p>Sauf que voilà, sous Archlinux, les dépendances, pour cette fonctionnalité, ne sont pas installé par défaut avec Elixir et vous risquez de rencontrer l&rsquo;erreur suivante :</p>
-<pre tabindex="0"><code>[error] ERROR: Could not find 'wxe_driver.so' in: /usr/lib/erlang/lib/wx-1.8.1/priv
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elixir" data-lang="elixir"><span style="display:flex;"><span><span style="color:#e6db74">:observer</span><span style="color:#f92672">.</span>start
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ou</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">:debugger</span><span style="color:#f92672">.</span>start
+</span></span></code></pre></div><p>Sauf que voilà, sous Archlinux, les dépendances, pour cette fonctionnalité, ne sont pas installé par défaut avec Elixir et vous risquez de rencontrer l&rsquo;erreur suivante :</p>
+<pre tabindex="0"><code>[error] ERROR: Could not find &#39;wxe_driver.so&#39; in: /usr/lib/erlang/lib/wx-1.8.1/priv
 </code></pre><p>Pour remédier à cela, il suffit d&rsquo;installer le package suivant :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pacman -S erlang
-</code></pre></div><p>Rien d&rsquo;étonnant à cela, le langage Elixir tourne sur la machine virtuelle de Erlang.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo pacman -S erlang
+</span></span></code></pre></div><p>Rien d&rsquo;étonnant à cela, le langage Elixir tourne sur la machine virtuelle de Erlang.
 De base Elixir s&rsquo;appui sur le paquet <code>erlang-nox</code> : une version d&rsquo;Erlang sans gestion du système Window X. Il est donc nécessaire de le remplacer par le paquet qui inclut ce système.</p>
 <p>Pour pouvez désormais profiter de votre debugger !</p>
 
@@ -233,7 +233,7 @@ De base Elixir s&rsquo;appui sur le paquet <code>erlang-nox</code> : une version
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://www.skitoo.net">Alexis Couronne</a></span>
+    <span>&copy; 2022 <a href="https://www.skitoo.net">Alexis Couronne</a></span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
